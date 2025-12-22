@@ -580,10 +580,3 @@ elif page == "Trends":
 
         except Exception as e:
             st.error(f"Error loading history data: {e}")
-
-# =========================================================
-# DEBUG PANEL
-# =========================================================
-with st.expander("🛠 Debug Panel", expanded=False):
-    st.write(f"Data Dir: {DATA_DIR}")
-    st.write(f"Projects Loaded: {len(df_projects_all)}")
