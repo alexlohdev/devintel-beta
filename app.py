@@ -58,7 +58,7 @@ def apply_theme():
           .kpiNum { font-size: 22px; }
           .pill { font-size: 11px; padding:5px 8px; }
           .card { padding: 12px; }
-          [data-testid="stSidebar"] { width: 80vw !important; min-width: 280px; }
+
         }
         </style>
         """,
