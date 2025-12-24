@@ -1,8 +1,9 @@
 streamlit
 pandas
 selenium
-webdriver-managerstreamlit
+webdriver-manager
 requests
 beautifulsoup4
 lxml
 altair
+
