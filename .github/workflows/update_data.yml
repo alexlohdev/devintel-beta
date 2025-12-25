@@ -29,4 +29,4 @@ jobs:
           DB_PORT: "6543"
           DB_NAME: "postgres"
           DB_USER: "postgres"
-        run: python publisher.py
+        run: python publish_data.py
