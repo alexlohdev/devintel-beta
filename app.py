@@ -656,15 +656,15 @@ elif page == "Trends":
         st.subheader(f"Sold Units: {selected_proj}")
         st.line_chart(chart_data, x="scraped_date", y="units_sold")
                 
-                if y_col in chart_data.columns:
-                    st.line_chart(chart_data, x="Date", y=y_col)
-                    st.caption(f"Tracking metric: {y_col}")
-                else:
-                    st.error("Column 'Unit Terjual' not found in history file. Please check CSV headers.")
+        if y_col in chart_data.columns:
+            st.line_chart(chart_data, x="Date", y=y_col)
+            st.caption(f"Tracking metric: {y_col}")
+        else:
+            st.error("Column 'Unit Terjual' not found in history file. Please check CSV headers.")
                 
-                # 6. Show raw data
-                with st.expander("View Raw Historical Data"):
-                    st.dataframe(chart_data, use_container_width=True)
+        # 6. Show raw data
+         with st.expander("View Raw Historical Data"):
+            st.dataframe(chart_data, use_container_width=True)
 
         except Exception as e:
             st.error(f"Error loading history data: {e}")
@@ -675,4 +675,5 @@ elif page == "Trends":
 with st.expander("🛠 Debug Panel", expanded=False):
     st.write(f"Supabase Connection Active")
     st.write(f"Projects Loaded: {len(df_projects_all)}")
+
 
