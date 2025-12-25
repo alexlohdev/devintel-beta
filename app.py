@@ -5,14 +5,16 @@ import io
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+from sqlalchemy import text
 
 # =========================
 # DATA CONFIG
 # =========================
-DATA_DIR = "data/pemaju"
+# Note: HISTORY_FILE and ACCESS_LOG_FILE are still local.
+# You can migrate these to Supabase later if needed.
+DATA_DIR = "data/pemaju" # Kept for fallback, though we use DB now
 HISTORY_FILE = "data/history_tracker.csv"
 ACCESS_LOG_FILE = "data/access_logs.csv"
-
 
 # =========================================================
 # PAGE CONFIG
@@ -58,7 +60,6 @@ def apply_theme():
           .kpiNum { font-size: 22px; }
           .pill { font-size: 11px; padding:5px 8px; }
           .card { padding: 12px; }
-
         }
         </style>
         """,
@@ -79,6 +80,8 @@ def log_access(name, org):
     file_exists = os.path.exists(ACCESS_LOG_FILE)
     
     try:
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(ACCESS_LOG_FILE), exist_ok=True)
         with open(ACCESS_LOG_FILE, mode="a", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             if not file_exists:
@@ -86,8 +89,6 @@ def log_access(name, org):
             writer.writerow([timestamp, name, org])
     except Exception as e:
         print(f"Logging failed: {e}")
-
-
 
 def check_login():
     """Simple gatekeeper ensuring user enters name."""
@@ -131,24 +132,11 @@ if "selected_pemaju" not in st.session_state:
     st.session_state.selected_pemaju = "All"
 
 # =========================================================
-# HELPERS
+# DATABASE LOADERS & HELPERS
 # =========================================================
-def get_pemaju_list(data_dir):
-    if not os.path.exists(data_dir):
-        return []
-    return sorted([
-        d.strip() for d in os.listdir(data_dir)
-        if os.path.isdir(os.path.join(data_dir, d))
-    ])
-
-def _pick_latest_file(folder: str, contains_text: str):
-    files = sorted(
-        glob.glob(os.path.join(folder, f"*{contains_text}*.csv")),
-        reverse=True 
-    )
-    return files[0] if files else None
 
 def _to_float_rm(x):
+    """Cleans currency strings like 'RM 1,200.00' to float."""
     s = str(x or "").strip()
     s = s.replace("RM", "").replace(",", "").strip()
     try:
@@ -156,70 +144,57 @@ def _to_float_rm(x):
     except:
         return 0.0
 
-@st.cache_data(show_spinner=False)
-def load_all_pemaju_data(data_dir: str):
-    if not os.path.exists(data_dir):
+@st.cache_data(ttl=600, show_spinner=False)
+def load_data_from_supabase():
+    """Fetches data from Supabase and formats it for the dashboard."""
+    # Connect using Streamlit's secrets
+    conn = st.connection("supabase", type="sql")
+
+    try:
+        df_projects = conn.query("SELECT * FROM projects_master;", ttl=600)
+        df_units = conn.query("SELECT * FROM units_detail;", ttl=600)
+        df_house = conn.query("SELECT * FROM house_types;", ttl=600)
+    except Exception as e:
+        st.error(f"Failed to connect to database: {e}")
         return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
-    pemaju_folders_raw = [
-        d for d in os.listdir(data_dir)
-        if os.path.isdir(os.path.join(data_dir, d))
-    ]
+    # Helper to combine Code + Name into one display column
+    def create_display_name(df):
+        if not df.empty and "project_code" in df.columns and "project_name" in df.columns:
+            # Handle potential None/NaN values
+            code = df["project_code"].fillna("")
+            name = df["project_name"].fillna("")
+            return code + " " + name
+        return ""
 
-    master_frames, unit_frames, house_frames = [], [], []
+    # 1. PREPARE PROJECTS MASTER
+    if not df_projects.empty:
+        # Create the unified name column (Crucial for UI)
+        df_projects["Kod Projek & Nama Projek"] = create_display_name(df_projects)
+        
+        # Ensure date columns are datetime
+        for col in ["scraped_date", "scraped_timestamp"]:
+            if col in df_projects.columns:
+                df_projects[col] = pd.to_datetime(df_projects[col], errors='coerce')
 
-    for pemaju_folder in pemaju_folders_raw:
-        pemaju = pemaju_folder.strip()
-        folder = os.path.join(data_dir, pemaju_folder)
+    # 2. PREPARE UNITS DETAIL
+    if not df_units.empty:
+        df_units["Kod Projek & Nama Projek"] = create_display_name(df_units)
+        
+    # 3. PREPARE HOUSE TYPES
+    if not df_house.empty:
+        df_house["Kod Projek & Nama Projek"] = create_display_name(df_house)
 
-        master_file = _pick_latest_file(folder, "_MELAKA_ALL_PROJECTS_")
-        unit_file   = _pick_latest_file(folder, "_MELAKA_UNIT_DETAILS_")
-        house_file  = _pick_latest_file(folder, "_MELAKA_HOUSE_TYPE_")
+    return df_projects, df_units, df_house
 
-        try:
-            if master_file:
-                dfm = pd.read_csv(master_file, encoding="utf-8-sig")
-                dfm.columns = dfm.columns.astype(str).str.replace("\ufeff", "", regex=False).str.strip()
-                dfm["Pemaju"] = pemaju
-                master_frames.append(dfm)
-        except Exception: pass
-
-        try:
-            if unit_file:
-                dfu = pd.read_csv(unit_file, encoding="utf-8-sig")
-                dfu.columns = dfu.columns.astype(str).str.replace("\ufeff", "", regex=False).str.strip()
-                dfu["Pemaju"] = pemaju
-                # Fix PyArrow mixed types
-                for col_fix in ["Bil Bilik", "Bil Bilik Air"]:
-                    if col_fix in dfu.columns:
-                        dfu[col_fix] = dfu[col_fix].astype(str)
-                unit_frames.append(dfu)
-        except Exception: pass
-
-        try:
-            if house_file:
-                dfh = pd.read_csv(house_file, encoding="utf-8-sig")
-                dfh.columns = dfh.columns.astype(str).str.replace("\ufeff", "", regex=False).str.strip()
-                dfh["Pemaju"] = pemaju
-                # Fix PyArrow mixed types
-                for col_fix in ["Bil Bilik", "Bil Bilik Air"]:
-                    if col_fix in dfh.columns:
-                        dfh[col_fix] = dfh[col_fix].astype(str)
-                house_frames.append(dfh)
-        except Exception: pass
-
-    df_master_all = pd.concat(master_frames, ignore_index=True) if master_frames else pd.DataFrame()
-    df_units_all  = pd.concat(unit_frames,  ignore_index=True) if unit_frames else pd.DataFrame()
-    df_house_all  = pd.concat(house_frames, ignore_index=True) if house_frames else pd.DataFrame()
-
-    return df_master_all, df_units_all, df_house_all
-    
 def get_last_sync(df_list):
+    """Finds the latest scraped timestamp across all dataframes."""
     times = []
     for df in df_list:
         if df is None or df.empty:
             continue
-        for col in ["Scraped_Timestamp", "Scraped_Date"]:
+        # Check both naming conventions just in case
+        for col in ["scraped_timestamp", "Scraped_Timestamp", "scraped_date", "Scraped_Date"]:
             if col in df.columns:
                 t = pd.to_datetime(df[col], errors="coerce")
                 times.append(t.max())
@@ -228,23 +203,41 @@ def get_last_sync(df_list):
     return max(times) if times else None
 
 def build_project_overview(df_master_all: pd.DataFrame, df_units_all: pd.DataFrame):
+    """
+    Aggregates unit-level data into project-level statistics.
+    Uses English database columns but outputs Malay headers to match UI expectations.
+    """
     if df_units_all is None or df_units_all.empty:
-        return pd.DataFrame(columns=["No.", "Pemaju", "Kod Projek & Nama Projek", "Total Unit", "Unit Terjual", "Unit Belum Jual", "Take-Up %", "Jumlah Jualan (RM)", "Unit Bumi", "Unit Non Bumi", "Daerah", "Negeri"])
+        # Return empty structure with expected headers
+        return pd.DataFrame(columns=["No.", "Pemaju", "Kod Projek & Nama Projek", "Total Unit", "Unit Terjual", 
+                                   "Unit Belum Jual", "Take-Up %", "Jumlah Jualan (RM)", 
+                                   "Unit Bumi", "Unit Non Bumi", "Daerah", "Negeri"])
 
     dfu = df_units_all.copy()
-    if "Pemaju" not in dfu.columns: dfu["Pemaju"] = ""
-    if "No. Permit" not in dfu.columns: return pd.DataFrame()
+    
+    # --- 1. Prepare Calculation Columns (using English DB names) ---
+    # Status: Check for both Malay (from scraping) and English keywords
+    dfu["__status"] = dfu.get("status", "").astype(str).str.lower()
+    dfu["__is_sold"] = dfu["__status"].str.contains("telah dijual", na=False) | dfu["__status"].str.contains("sold", na=False)
+    dfu["__is_unsold"] = dfu["__status"].str.contains("belum dijual", na=False) | dfu["__status"].str.contains("unsold", na=False)
+    
+    # Price
+    dfu["__harga"] = dfu.get("price_sales", "").apply(_to_float_rm)
+    
+    # Bumi Quota
+    dfu["__is_bumi"] = dfu.get("bumi_quota", "").astype(str).str.strip().str.lower().eq("ya")
 
-    dfu["__status"] = dfu.get("Status Jualan", "").astype(str).str.lower()
-    dfu["__is_sold"] = dfu["__status"].str.contains("telah dijual", na=False)
-    dfu["__is_unsold"] = dfu["__status"].str.contains("belum dijual", na=False)
-    dfu["__harga"] = dfu.get("Harga Jualan (RM)", "").apply(_to_float_rm)
-    dfu["__is_bumi"] = dfu.get("Kuota Bumi", "").astype(str).str.strip().str.lower().eq("ya")
+    # --- 2. Group By (Developer & Project) ---
+    # We group by the Display Name we created earlier to keep it aligned with UI
+    gcols = ["pemaju_name", "Kod Projek & Nama Projek"]
+    
+    # Safety check
+    if "pemaju_name" not in dfu.columns or "Kod Projek & Nama Projek" not in dfu.columns:
+        return pd.DataFrame()
 
-    gcols = ["Pemaju", "No. Permit"]
     agg = dfu.groupby(gcols, as_index=False).agg(
         **{
-            "Total Unit": ("No Unit", "count"),
+            "Total Unit": ("unit_no", "count"),
             "Unit Terjual": ("__is_sold", "sum"),
             "Unit Belum Jual": ("__is_unsold", "sum"),
             "Jumlah Jualan (RM)": ("__harga", lambda s: float(s[dfu.loc[s.index, "__is_sold"]].sum())),
@@ -253,32 +246,41 @@ def build_project_overview(df_master_all: pd.DataFrame, df_units_all: pd.DataFra
     )
     agg["Unit Non Bumi"] = agg["Total Unit"] - agg["Unit Bumi"]
 
+    # --- 3. Merge Location Data from Master ---
     if df_master_all is not None and not df_master_all.empty:
         dfm = df_master_all.copy()
-        if "Pemaju" not in dfm.columns: dfm["Pemaju"] = ""
-        keep_loc = [c for c in ["Pemaju", "No. Permit", "Daerah Projek", "Negeri Projek"] if c in dfm.columns]
-        df_loc = dfm[keep_loc].drop_duplicates() if keep_loc else pd.DataFrame()
+        
+        # We need a common key. Project Code is safest, but we grouped by Name.
+        # Let's try to grab location based on the 'Kod Projek & Nama Projek' we created in both DFs.
+        keep_cols = ["Kod Projek & Nama Projek", "location_district", "location_state"]
+        keep_cols = [c for c in keep_cols if c in dfm.columns]
+        
+        df_loc = dfm[keep_cols].drop_duplicates(subset=["Kod Projek & Nama Projek"])
+        
         if not df_loc.empty:
-            agg = agg.merge(df_loc, on=["Pemaju", "No. Permit"], how="left")
-            agg = agg.rename(columns={"Daerah Projek": "Daerah", "Negeri Projek": "Negeri"})
+            agg = agg.merge(df_loc, on="Kod Projek & Nama Projek", how="left")
+            agg = agg.rename(columns={"location_district": "Daerah", "location_state": "Negeri"})
         else:
             agg["Daerah"] = ""; agg["Negeri"] = ""
-
-        if "Kod Projek & Nama Projek" in dfm.columns:
-            df_name = dfm[["Pemaju", "No. Permit", "Kod Projek & Nama Projek"]].drop_duplicates()
-            agg = agg.merge(df_name, on=["Pemaju", "No. Permit"], how="left")
-        else:
-            agg["Kod Projek & Nama Projek"] = ""
     else:
-        agg["Daerah"] = ""; agg["Negeri"] = ""; agg["Kod Projek & Nama Projek"] = ""
+        agg["Daerah"] = ""; agg["Negeri"] = ""
 
+    # --- 4. Final Formatting ---
     agg["Take-Up %"] = (agg["Unit Terjual"] / agg["Total Unit"] * 100).fillna(0).round(1)
     
-    agg = agg[[
+    # Rename 'pemaju_name' to 'Pemaju' for the UI
+    agg = agg.rename(columns={"pemaju_name": "Pemaju"})
+
+    # Select and Reorder columns to match exactly what the UI expects
+    target_cols = [
         "Pemaju", "Kod Projek & Nama Projek", "Total Unit", "Unit Terjual",
         "Unit Belum Jual", "Take-Up %", "Jumlah Jualan (RM)", "Unit Bumi",
         "Unit Non Bumi", "Daerah", "Negeri",
-    ]].copy()
+    ]
+    
+    # Filter only existing columns (handles edge cases)
+    final_cols = [c for c in target_cols if c in agg.columns]
+    agg = agg[final_cols].copy()
 
     agg = agg.sort_values(["Pemaju", "Kod Projek & Nama Projek"], na_position="last").reset_index(drop=True)
     agg.insert(0, "No.", agg.index + 1)
@@ -306,6 +308,15 @@ def calculate_kpis(df):
         "take_up": (total_sold / total_units * 100) if total_units > 0 else 0.0
     }
 
+def get_pemaju_list(df_master):
+    """Extracts unique developer names."""
+    # Check for English column name first, then fallback
+    if "pemaju_name" in df_master.columns:
+        return sorted(df_master["pemaju_name"].dropna().unique().tolist())
+    elif "Pemaju" in df_master.columns:
+        return sorted(df_master["Pemaju"].dropna().unique().tolist())
+    return []
+
 # =========================================================
 # SIDEBAR
 # =========================================================
@@ -314,21 +325,26 @@ with st.sidebar:
     st.markdown('<span class="pill">Beta</span>', unsafe_allow_html=True)
     st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
     
-    # Cleaned up Navigation - Removed unused pages
     nav_items = ["Overview", "Projects", "Trends"]
     page = st.radio("Navigation", nav_items, index=0)
 
 
+# =========================================================
+# LOAD DATA (EXECUTION)
+# =========================================================
+df_master_all, df_units_all, df_house_all = load_data_from_supabase()
 
-# =========================================================
-# LOAD DATA
-# =========================================================
-df_master_all, df_units_all, df_house_all = load_all_pemaju_data(DATA_DIR)
+# Build the main overview table
 df_projects_all = build_project_overview(df_master_all, df_units_all)
+
+# Get Sync Time
 last_sync = get_last_sync([df_master_all, df_units_all, df_house_all])
 
-pemaju_list = get_pemaju_list(DATA_DIR)
+# Get Developer List
+# We use the master DF which has 'pemaju_name', pass that to helper
+pemaju_list = get_pemaju_list(df_master_all)
 pemaju_options = ["All"] + pemaju_list
+
 
 # =========================================================
 # UI Components
@@ -351,7 +367,6 @@ def compare_card(title, val_a, val_b, is_currency=False):
     fmt_a = f"RM {val_a:,.0f}" if is_currency else f"{val_a:,}"
     fmt_b = f"RM {val_b:,.0f}" if is_currency else f"{val_b:,}"
     
-    # Simple color logic: Green if A > B, else neutral (just for visual variation)
     color_a = "#E6EAF2"
     color_b = "#E6EAF2"
 
@@ -409,6 +424,7 @@ if page == "Overview":
     if view_mode == "Single View":
         # Filter
         _last = st.session_state.get("selected_pemaju", "All")
+        # Ensure selection is valid
         default_index = pemaju_options.index(_last) if _last in pemaju_options else 0
         selected = st.selectbox("Select Pemaju", pemaju_options, index=default_index)
         st.session_state.selected_pemaju = selected
@@ -416,7 +432,17 @@ if page == "Overview":
         # Data subset
         if selected != "All":
             df_projects = df_projects_all[df_projects_all["Pemaju"] == selected].copy()
-            df_house = df_house_all[df_house_all.get("Pemaju", "") == selected].copy()
+            # Note: df_house has 'pemaju_name' from DB, we didn't rename it in loader
+            # but we should check which column to filter on.
+            if not df_house_all.empty:
+                if "pemaju_name" in df_house_all.columns:
+                     df_house = df_house_all[df_house_all["pemaju_name"] == selected].copy()
+                elif "Pemaju" in df_house_all.columns:
+                     df_house = df_house_all[df_house_all["Pemaju"] == selected].copy()
+                else:
+                    df_house = pd.DataFrame()
+            else:
+                df_house = pd.DataFrame()
         else:
             df_projects = df_projects_all.copy()
             df_house = df_house_all.copy()
@@ -469,7 +495,9 @@ if page == "Overview":
         # House Types
         st.markdown("### House Type Details")
         if not df_house.empty:
-            st.dataframe(df_house, use_container_width=True, hide_index=True)
+            # Drop technical ID/Timestamp columns for cleaner view if desired
+            display_cols = [c for c in df_house.columns if c not in ['id', 'created_at', 'scraped_timestamp']]
+            st.dataframe(df_house[display_cols], use_container_width=True, hide_index=True)
         else:
             st.info("No house type data.")
 
@@ -500,9 +528,10 @@ if page == "Overview":
         if sel_projects_a:
             df_a = raw_df_a[raw_df_a["Kod Projek & Nama Projek"].isin(sel_projects_a)]
         else:
-            df_a = raw_df_a  # Fallback if user clears all, usually showing nothing or everything is a design choice. Let's show filtered.
-            if not projects_a: df_a = raw_df_a # No projects to select
-            else: df_a = raw_df_a[raw_df_a["Kod Projek & Nama Projek"].isin([])] # User explicitly cleared selection
+            # Default to all if none selected, or strict? 
+            # Original logic: "fallback... usually showing nothing or everything". 
+            # Let's show ALL projects by default if none selected for easier comparison.
+            df_a = raw_df_a 
 
         # Developer B
         raw_df_b = df_projects_all[df_projects_all["Pemaju"] == pemaju_b]
@@ -515,8 +544,6 @@ if page == "Overview":
             df_b = raw_df_b[raw_df_b["Kod Projek & Nama Projek"].isin(sel_projects_b)]
         else:
             df_b = raw_df_b
-            if not projects_b: df_b = raw_df_b
-            else: df_b = raw_df_b[raw_df_b["Kod Projek & Nama Projek"].isin([])]
 
         # Calculate KPIs
         kpi_a = calculate_kpis(df_a)
@@ -556,10 +583,16 @@ if page == "Overview":
         
         # Detailed Projects Table for both
         st.markdown(f"#### Project List: {pemaju_a}")
-        st.dataframe(df_a[["Kod Projek & Nama Projek", "Total Unit", "Unit Terjual", "Take-Up %", "Jumlah Jualan (RM)"]], use_container_width=True, hide_index=True)
+        if not df_a.empty:
+            st.dataframe(df_a[["Kod Projek & Nama Projek", "Total Unit", "Unit Terjual", "Take-Up %", "Jumlah Jualan (RM)"]], use_container_width=True, hide_index=True)
+        else:
+            st.info("No data")
         
         st.markdown(f"#### Project List: {pemaju_b}")
-        st.dataframe(df_b[["Kod Projek & Nama Projek", "Total Unit", "Unit Terjual", "Take-Up %", "Jumlah Jualan (RM)"]], use_container_width=True, hide_index=True)
+        if not df_b.empty:
+            st.dataframe(df_b[["Kod Projek & Nama Projek", "Total Unit", "Unit Terjual", "Take-Up %", "Jumlah Jualan (RM)"]], use_container_width=True, hide_index=True)
+        else:
+            st.info("No data")
 
 
 # =========================================================
@@ -592,7 +625,7 @@ elif page == "Projects":
 # =========================================================
 elif page == "Trends":
     st.markdown("## 📈 Sales Trends (Historical)")
-    
+    st.caption("Note: This data is loaded from local history files, not live database.")
     
     if not os.path.exists(HISTORY_FILE):
         st.warning(f"No history file found at `{HISTORY_FILE}`. Run the publisher script to generate it.")
@@ -601,8 +634,7 @@ elif page == "Trends":
             # 1. Load History
             df_hist = pd.read_csv(HISTORY_FILE)
             
-            # 2. Filter by the currently selected developer (from Sidebar logic, or add local select)
-            # Since sidebar navigation handles selection context in Overview, here we let user choose freely
+            # 2. Filter by the currently selected developer
             dev_list = sorted(df_hist["Developer"].unique())
             sel_dev = st.selectbox("Select Developer", dev_list)
             
@@ -621,7 +653,7 @@ elif page == "Trends":
                 # 5. Render Chart - Comparing SOLD UNITS
                 st.subheader(f"Sold Units Trend: {selected_proj}")
                 
-                # Ensure Date is actually datetime objects for correct X-axis scaling
+                # Ensure Date is actually datetime objects
                 chart_data["Date"] = pd.to_datetime(chart_data["Date"])
                 
                 # Determine which column to plot
@@ -647,5 +679,5 @@ elif page == "Trends":
 # DEBUG PANEL
 # =========================================================
 with st.expander("🛠 Debug Panel", expanded=False):
-    st.write(f"Data Dir: {DATA_DIR}")
+    st.write(f"Supabase Connection Active")
     st.write(f"Projects Loaded: {len(df_projects_all)}")
