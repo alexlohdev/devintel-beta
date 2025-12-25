@@ -623,51 +623,58 @@ elif page == "Projects":
 # =========================================================
 # PAGE: TRENDS
 # =========================================================
+# =========================================================
+# PAGE: TRENDS (Connected to Supabase)
+# =========================================================
 elif page == "Trends":
     st.markdown("## 📈 Sales Trends")
-    
-    # CONNECT TO DB
+    st.caption("Data source: Supabase (history_logs)")
+
+    # 1. Connect to Database
     conn = st.connection("supabase", type="sql")
     
-    # FETCH HISTORY
+    # 2. Fetch History Data
     try:
+        # We order by date to ensure the chart looks right
         df_hist = conn.query("SELECT * FROM history_logs ORDER BY scraped_date ASC;", ttl=0)
     except Exception as e:
-        st.error("No history data found.")
+        st.error(f"Error connecting to database: {e}")
         st.stop()
 
     if df_hist.empty:
-        st.info("No history logs available yet.")
+        st.info("No history logs available yet. (Run the publisher script to generate data!)")
     else:
-        # FILTER DEVELOPER
+        # 3. Filter by Developer
+        # We use 'developer_name' because that's the column in the history_logs table
         dev_list = sorted(df_hist["developer_name"].unique())
         sel_dev = st.selectbox("Select Developer", dev_list)
         
         df_dev_hist = df_hist[df_hist["developer_name"] == sel_dev]
         
-        # FILTER PROJECT
-        projects = sorted(df_dev_hist["project_name"].unique())
-        selected_proj = st.selectbox("Select Project", projects)
-        
-        # PLOT
-        chart_data = df_dev_hist[df_dev_hist["project_name"] == selected_proj]
-        chart_data["scraped_date"] = pd.to_datetime(chart_data["scraped_date"])
-        
-        st.subheader(f"Sold Units: {selected_proj}")
-        st.line_chart(chart_data, x="scraped_date", y="units_sold")
-                
-        if y_col in chart_data.columns:
-            st.line_chart(chart_data, x="Date", y=y_col)
-            st.caption(f"Tracking metric: {y_col}")
+        if df_dev_hist.empty:
+            st.info("No data for this developer.")
         else:
-            st.error("Column 'Unit Terjual' not found in history file. Please check CSV headers.")
-                
-        # 6. Show raw data
-         with st.expander("View Raw Historical Data"):
-            st.dataframe(chart_data, use_container_width=True)
+            # 4. Filter by Project
+            projects = sorted(df_dev_hist["project_name"].unique())
+            selected_proj = st.selectbox("Select Project", projects)
+            
+            # 5. Prepare Chart Data
+            chart_data = df_dev_hist[df_dev_hist["project_name"] == selected_proj].copy()
+            
+            # Ensure date is datetime format for Streamlit charts
+            chart_data["scraped_date"] = pd.to_datetime(chart_data["scraped_date"])
+            
+            # 6. Render Chart
+            st.subheader(f"Sold Units Trend: {selected_proj}")
+            
+            # We don't need 'if y_col in...' checks because the DB column 'units_sold' is guaranteed
+            st.line_chart(chart_data, x="scraped_date", y="units_sold")
+            
+            st.caption(f"Tracking metric: units_sold")
 
-        except Exception as e:
-            st.error(f"Error loading history data: {e}")
+            # Optional: Show raw data table below chart
+            with st.expander("View Raw Historical Data"):
+                st.dataframe(chart_data, use_container_width=True)
 
 # =========================================================
 # DEBUG PANEL
@@ -675,5 +682,6 @@ elif page == "Trends":
 with st.expander("🛠 Debug Panel", expanded=False):
     st.write(f"Supabase Connection Active")
     st.write(f"Projects Loaded: {len(df_projects_all)}")
+
 
 
