@@ -1,0 +1,61 @@
+2025-12-25 12:14:11,105 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_KK FRONTIERS DEVELOPMENT_20251225_121411.log
+2025-12-25 12:14:11,105 | INFO | ✅ Start Pemaju: KK FRONTIERS DEVELOPMENT
+2025-12-25 12:14:11,105 | INFO | ✅ Output folder: ./data/pemaju/KK FRONTIERS DEVELOPMENT
+2025-12-25 12:14:11,105 | INFO | ====== WebDriver manager ======
+2025-12-25 12:14:12,608 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 12:14:12,645 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 12:14:12,676 | INFO | There is no [linux64] chromedriver "143.0.7499.169" for browser google-chrome "143.0.7499" in cache
+2025-12-25 12:14:12,676 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 12:14:12,785 | INFO | WebDriver version 143.0.7499.169 selected
+2025-12-25 12:14:12,791 | INFO | Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.169/linux64/chromedriver-linux64.zip
+2025-12-25 12:14:12,791 | INFO | About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.169/linux64/chromedriver-linux64.zip
+2025-12-25 12:14:12,832 | INFO | Driver downloading response is 200
+2025-12-25 12:14:12,882 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 12:14:13,023 | INFO | Driver has been saved in cache [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169]
+2025-12-25 12:14:18,704 | INFO | ✅ Chrome started (headless=True)
+2025-12-25 12:14:25,818 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-25 12:14:30,637 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-25 12:14:35,248 | INFO | ✅ Negeri = Melaka
+2025-12-25 12:14:36,981 | INFO | ✅ Kata Kunci = KK FRONTIERS DEVELOPMENT
+2025-12-25 12:14:39,305 | INFO | ✅ Clicked CARI
+2025-12-25 12:14:39,324 | INFO | ✅ Results table loaded
+2025-12-25 12:14:39,325 | INFO | ✅ Processing listing page 1
+2025-12-25 12:14:39,384 | INFO | ✅ [1] Open: 30895-2 TAMAN CHENG SETIA
+2025-12-25 12:14:44,212 | INFO | ✅ Opened project detail
+2025-12-25 12:14:48,035 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:14:48,048 | INFO | ✅ Daerah Projek = '-'
+2025-12-25 12:14:48,083 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:14:51,898 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:14:51,912 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:14:51,912 | INFO | ✅ Status Keseluruhan = Permit Tidak Wujud
+2025-12-25 12:14:52,069 | INFO | ✅ Status table rows = 2
+2025-12-25 12:14:55,881 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:15:00,711 | INFO | ✅ Unit modal opened
+2025-12-25 12:15:04,566 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:15:05,251 | INFO | ✅ Unit rows scraped = 20
+2025-12-25 12:15:07,586 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:15:07,586 | INFO | ✅ Unit details scraped
+2025-12-25 12:15:09,104 | INFO | ✅ Returned to listing
+2025-12-25 12:15:09,138 | INFO | ✅ [2] Open: 30895-1 TAMAN CHENG SETIA
+2025-12-25 12:15:13,940 | INFO | ✅ Opened project detail
+2025-12-25 12:15:17,756 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:15:17,767 | INFO | ✅ Daerah Projek = '-'
+2025-12-25 12:15:17,792 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:15:21,603 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:15:21,614 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:15:21,614 | INFO | ✅ Status Keseluruhan = Belum Mula
+2025-12-25 12:15:21,774 | INFO | ✅ Status table rows = 2
+2025-12-25 12:15:25,588 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:15:30,406 | INFO | ✅ Unit modal opened
+2025-12-25 12:15:34,250 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:15:37,134 | INFO | ✅ Unit rows scraped = 86
+2025-12-25 12:15:39,441 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:15:39,441 | INFO | ✅ Unit details scraped
+2025-12-25 12:15:40,959 | INFO | ✅ Returned to listing
+2025-12-25 12:15:40,975 | INFO | ✅ No next page. Pagination done.
+2025-12-25 12:15:41,018 | INFO | ✅ Saved CSV: ./data/pemaju/KK FRONTIERS DEVELOPMENT/KK FRONTIERS DEVELOPMENT_MELAKA_ALL_PROJECTS_20251225.csv
+2025-12-25 12:15:41,019 | INFO | ✅ Saved CSV: ./data/pemaju/KK FRONTIERS DEVELOPMENT/KK FRONTIERS DEVELOPMENT_MELAKA_HOUSE_TYPE_20251225.csv
+2025-12-25 12:15:41,020 | INFO | ✅ Saved CSV: ./data/pemaju/KK FRONTIERS DEVELOPMENT/KK FRONTIERS DEVELOPMENT_MELAKA_UNIT_DETAILS_20251225.csv
+2025-12-25 12:15:41,020 | INFO | ✅ SUMMARY: Projects=2, HouseTypes=4, UnitRows=106
+2025-12-25 12:15:41,020 | INFO | ✅ DONE pemaju scrape
+2025-12-25 12:15:41,115 | INFO | ✅ Chrome driver closed

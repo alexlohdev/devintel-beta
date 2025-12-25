@@ -1,0 +1,214 @@
+2025-12-25 12:42:22,707 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_SINMAH DEVELOPMENT_20251225_121411.log
+2025-12-25 12:42:22,708 | INFO | ✅ Start Pemaju: SINMAH DEVELOPMENT
+2025-12-25 12:42:22,708 | INFO | ✅ Output folder: ./data/pemaju/SINMAH DEVELOPMENT
+2025-12-25 12:42:22,708 | INFO | ====== WebDriver manager ======
+2025-12-25 12:42:22,774 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 12:42:22,804 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 12:42:22,835 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-25 12:42:23,049 | INFO | ✅ Chrome started (headless=True)
+2025-12-25 12:42:28,058 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-25 12:42:32,688 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-25 12:42:37,306 | INFO | ✅ Negeri = Melaka
+2025-12-25 12:42:38,913 | INFO | ✅ Kata Kunci = SINMAH DEVELOPMENT
+2025-12-25 12:42:41,233 | INFO | ✅ Clicked CARI
+2025-12-25 12:42:41,247 | INFO | ✅ Results table loaded
+2025-12-25 12:42:41,248 | INFO | ✅ Processing listing page 1
+2025-12-25 12:42:41,307 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-25 12:42:46,117 | INFO | ✅ Opened project detail
+2025-12-25 12:42:49,946 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:42:49,962 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:42:50,005 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:42:53,824 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:42:53,839 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:42:53,839 | INFO | ✅ Status Keseluruhan = Belum Mula
+2025-12-25 12:42:54,001 | INFO | ✅ Status table rows = 2
+2025-12-25 12:42:57,817 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:43:02,648 | INFO | ✅ Unit modal opened
+2025-12-25 12:43:06,493 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:43:07,253 | INFO | ✅ Unit rows scraped = 22
+2025-12-25 12:43:09,596 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:43:09,597 | INFO | ✅ Unit details scraped
+2025-12-25 12:43:11,114 | INFO | ✅ Returned to listing
+2025-12-25 12:43:11,152 | INFO | ✅ [2] Open: 6259-14 TAMAN TANJONG MINYAK JAYA
+2025-12-25 12:43:15,959 | INFO | ✅ Opened project detail
+2025-12-25 12:43:19,778 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:43:19,791 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:43:19,818 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:43:23,632 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:43:23,643 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:43:23,643 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 12:43:23,725 | INFO | ✅ Status table rows = 1
+2025-12-25 12:43:27,551 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:43:32,372 | INFO | ✅ Unit modal opened
+2025-12-25 12:43:36,200 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:43:36,565 | INFO | ✅ Unit rows scraped = 10
+2025-12-25 12:43:38,912 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:43:38,913 | INFO | ✅ Unit details scraped
+2025-12-25 12:43:40,431 | INFO | ✅ Returned to listing
+2025-12-25 12:43:40,467 | INFO | ✅ [3] Open: 6259-13 TAMAN SAUJANA INDAH
+2025-12-25 12:43:45,272 | INFO | ✅ Opened project detail
+2025-12-25 12:43:49,093 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:43:49,106 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:43:49,130 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:43:52,949 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:43:52,960 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:43:52,960 | INFO | ✅ Status Keseluruhan = Permit Telah Dibatalkan
+2025-12-25 12:43:53,044 | INFO | ✅ Status table rows = 1
+2025-12-25 12:43:56,860 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:44:01,679 | INFO | ✅ Unit modal opened
+2025-12-25 12:44:05,507 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:44:05,762 | INFO | ✅ Unit rows scraped = 7
+2025-12-25 12:44:08,076 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:44:08,076 | INFO | ✅ Unit details scraped
+2025-12-25 12:44:09,592 | INFO | ✅ Returned to listing
+2025-12-25 12:44:09,626 | INFO | ✅ [4] Open: 6259-12 TAMAN TANJONG MINYAK JAYA
+2025-12-25 12:44:14,430 | INFO | ✅ Opened project detail
+2025-12-25 12:44:18,247 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:44:18,259 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:44:18,285 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:44:22,107 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:44:22,118 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:44:22,118 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 12:44:22,201 | INFO | ✅ Status table rows = 1
+2025-12-25 12:44:26,018 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:44:30,839 | INFO | ✅ Unit modal opened
+2025-12-25 12:44:34,666 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:44:35,003 | INFO | ✅ Unit rows scraped = 9
+2025-12-25 12:44:37,342 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:44:37,342 | INFO | ✅ Unit details scraped
+2025-12-25 12:44:38,859 | INFO | ✅ Returned to listing
+2025-12-25 12:44:38,895 | INFO | ✅ [5] Open: 6259-11 TANJONG MINYAK JAYA
+2025-12-25 12:44:43,697 | INFO | ✅ Opened project detail
+2025-12-25 12:44:47,512 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:44:47,524 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:44:47,550 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:44:51,364 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:44:51,375 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:44:51,375 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 12:44:51,523 | INFO | ✅ Status table rows = 2
+2025-12-25 12:44:55,343 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:45:00,162 | INFO | ✅ Unit modal opened
+2025-12-25 12:45:03,991 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:45:04,499 | INFO | ✅ Unit rows scraped = 14
+2025-12-25 12:45:06,817 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:45:06,817 | INFO | ✅ Unit details scraped
+2025-12-25 12:45:08,335 | INFO | ✅ Returned to listing
+2025-12-25 12:45:08,371 | INFO | ✅ [6] Open: 6259-10 TAMAN KRUBONG UTAMA
+2025-12-25 12:45:13,176 | INFO | ✅ Opened project detail
+2025-12-25 12:45:16,993 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:45:17,006 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:45:17,031 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:45:20,850 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:45:20,862 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:45:20,863 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 12:45:21,706 | INFO | ✅ Status table rows = 12
+2025-12-25 12:45:25,523 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:45:30,343 | INFO | ✅ Unit modal opened
+2025-12-25 12:45:34,200 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:45:37,457 | INFO | ✅ Unit rows scraped = 96
+2025-12-25 12:45:39,816 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:45:39,816 | INFO | ✅ Unit details scraped
+2025-12-25 12:45:41,334 | INFO | ✅ Returned to listing
+2025-12-25 12:45:41,372 | INFO | ✅ [7] Open: 6259-9 TAMAN KRUBONG UTAMA
+2025-12-25 12:45:46,177 | INFO | ✅ Opened project detail
+2025-12-25 12:45:49,995 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:45:50,007 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:45:50,035 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:45:53,858 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:45:53,871 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:45:53,871 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 12:45:55,788 | INFO | ✅ Status table rows = 26
+2025-12-25 12:45:59,605 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:46:04,435 | INFO | ✅ Unit modal opened
+2025-12-25 12:46:08,355 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:46:19,953 | INFO | ✅ Unit rows scraped = 337
+2025-12-25 12:46:22,290 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:46:22,290 | INFO | ✅ Unit details scraped
+2025-12-25 12:46:23,812 | INFO | ✅ Returned to listing
+2025-12-25 12:46:23,848 | INFO | ✅ [8] Open: 6259-8 TAMAN SAUJANA INDAH
+2025-12-25 12:46:28,659 | INFO | ✅ Opened project detail
+2025-12-25 12:46:32,490 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:46:32,504 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:46:32,539 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:46:36,357 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:46:36,373 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:46:36,373 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-25 12:46:36,709 | INFO | ✅ Status table rows = 4
+2025-12-25 12:46:40,523 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:46:45,366 | INFO | ✅ Unit modal opened
+2025-12-25 12:46:49,300 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:47:00,751 | INFO | ✅ Unit rows scraped = 337
+2025-12-25 12:47:03,069 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:47:03,069 | INFO | ✅ Unit details scraped
+2025-12-25 12:47:04,591 | INFO | ✅ Returned to listing
+2025-12-25 12:47:04,628 | INFO | ✅ [9] Open: 6259-6 TAMAN SAUJANA INDAH
+2025-12-25 12:47:09,438 | INFO | ✅ Opened project detail
+2025-12-25 12:47:13,253 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:47:13,267 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:47:13,303 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:47:17,120 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:47:17,134 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:47:17,134 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-25 12:47:17,705 | INFO | ✅ Status table rows = 8
+2025-12-25 12:47:21,518 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:47:26,367 | INFO | ✅ Unit modal opened
+2025-12-25 12:47:30,296 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:47:41,877 | INFO | ✅ Unit rows scraped = 337
+2025-12-25 12:47:44,196 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:47:44,197 | INFO | ✅ Unit details scraped
+2025-12-25 12:47:45,718 | INFO | ✅ Returned to listing
+2025-12-25 12:47:45,753 | INFO | ✅ [10] Open: 6259-4 TAMAN SAUJANA INDAH
+2025-12-25 12:47:50,563 | INFO | ✅ Opened project detail
+2025-12-25 12:47:54,393 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:47:54,407 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:47:54,442 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:47:58,258 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:47:58,273 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:47:58,273 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-25 12:47:58,724 | INFO | ✅ Status table rows = 6
+2025-12-25 12:48:02,537 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:48:07,384 | INFO | ✅ Unit modal opened
+2025-12-25 12:48:11,321 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:48:22,735 | INFO | ✅ Unit rows scraped = 337
+2025-12-25 12:48:25,058 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:48:25,058 | INFO | ✅ Unit details scraped
+2025-12-25 12:48:26,580 | INFO | ✅ Returned to listing
+2025-12-25 12:48:26,618 | INFO | ✅ [11] Open: 6259-3 TAMAN SAUJANA INDAH
+2025-12-25 12:48:31,434 | INFO | ✅ Opened project detail
+2025-12-25 12:48:35,254 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:48:35,267 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:48:35,302 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:48:39,118 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:48:39,133 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:48:39,133 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-25 12:48:39,437 | INFO | ✅ Status table rows = 4
+2025-12-25 12:48:43,251 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:48:48,095 | INFO | ✅ Unit modal opened
+2025-12-25 12:48:52,024 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:49:03,451 | INFO | ✅ Unit rows scraped = 337
+2025-12-25 12:49:05,775 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:49:05,775 | INFO | ✅ Unit details scraped
+2025-12-25 12:49:07,296 | INFO | ✅ Returned to listing
+2025-12-25 12:49:07,336 | INFO | ✅ [12] Open: 6259-2 TAMAN SAUJANA INDAH
+2025-12-25 12:49:12,147 | INFO | ✅ Opened project detail
+2025-12-25 12:49:15,970 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:49:15,983 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 12:49:16,020 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 12:49:19,835 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 12:49:19,849 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 12:49:19,849 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-25 12:49:20,579 | INFO | ✅ Status table rows = 10
+2025-12-25 12:49:24,392 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 12:49:29,239 | INFO | ✅ Unit modal opened
+2025-12-25 12:49:33,190 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 12:49:44,700 | INFO | ✅ Unit rows scraped = 337
+2025-12-25 12:49:47,020 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 12:49:47,020 | INFO | ✅ Unit details scraped
+2025-12-25 12:49:48,559 | INFO | ✅ Returned to listing
+2025-12-25 12:49:48,708 | INFO | ✅ No next page. Pagination done.
+2025-12-25 12:49:48,709 | INFO | ✅ Saved CSV: ./data/pemaju/SINMAH DEVELOPMENT/SINMAH DEVELOPMENT_MELAKA_ALL_PROJECTS_20251225.csv
+2025-12-25 12:49:48,710 | INFO | ✅ Saved CSV: ./data/pemaju/SINMAH DEVELOPMENT/SINMAH DEVELOPMENT_MELAKA_HOUSE_TYPE_20251225.csv
+2025-12-25 12:49:48,725 | INFO | ✅ Saved CSV: ./data/pemaju/SINMAH DEVELOPMENT/SINMAH DEVELOPMENT_MELAKA_UNIT_DETAILS_20251225.csv
+2025-12-25 12:49:48,726 | INFO | ✅ SUMMARY: Projects=12, HouseTypes=77, UnitRows=2180
+2025-12-25 12:49:48,726 | INFO | ✅ DONE pemaju scrape
+2025-12-25 12:49:48,824 | INFO | ✅ Chrome driver closed

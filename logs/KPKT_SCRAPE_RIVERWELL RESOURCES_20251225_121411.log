@@ -1,0 +1,102 @@
+2025-12-25 14:45:52,768 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_RIVERWELL RESOURCES_20251225_121411.log
+2025-12-25 14:45:52,768 | INFO | ✅ Start Pemaju: RIVERWELL RESOURCES
+2025-12-25 14:45:52,768 | INFO | ✅ Output folder: ./data/pemaju/RIVERWELL RESOURCES
+2025-12-25 14:45:52,769 | INFO | ====== WebDriver manager ======
+2025-12-25 14:45:52,834 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 14:45:52,869 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 14:45:52,901 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-25 14:45:53,115 | INFO | ✅ Chrome started (headless=True)
+2025-12-25 14:45:58,527 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-25 14:46:03,155 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-25 14:46:07,767 | INFO | ✅ Negeri = Melaka
+2025-12-25 14:46:09,370 | INFO | ✅ Kata Kunci = RIVERWELL RESOURCES
+2025-12-25 14:46:11,691 | INFO | ✅ Clicked CARI
+2025-12-25 14:46:11,706 | INFO | ✅ Results table loaded
+2025-12-25 14:46:11,706 | INFO | ✅ Processing listing page 1
+2025-12-25 14:46:11,766 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-25 14:46:16,574 | INFO | ✅ Opened project detail
+2025-12-25 14:46:20,413 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:46:20,430 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-25 14:46:20,465 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 14:46:24,282 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 14:46:24,297 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 14:46:24,297 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-25 14:46:24,454 | INFO | ✅ Status table rows = 2
+2025-12-25 14:46:28,270 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:46:33,102 | INFO | ✅ Unit modal opened
+2025-12-25 14:46:36,993 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 14:46:44,689 | INFO | ✅ Unit rows scraped = 230
+2025-12-25 14:46:47,049 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 14:46:47,049 | INFO | ✅ Unit details scraped
+2025-12-25 14:46:48,572 | INFO | ✅ Returned to listing
+2025-12-25 14:46:48,607 | INFO | ✅ [2] Open: 10024-5 TAMAN GAPAM PERDANA
+2025-12-25 14:46:53,415 | INFO | ✅ Opened project detail
+2025-12-25 14:46:57,239 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:46:57,255 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-25 14:46:57,290 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 14:47:01,111 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 14:47:01,125 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 14:47:01,125 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-25 14:47:01,286 | INFO | ✅ Status table rows = 2
+2025-12-25 14:47:05,101 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:47:09,948 | INFO | ✅ Unit modal opened
+2025-12-25 14:47:13,841 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 14:47:23,068 | INFO | ✅ Unit rows scraped = 276
+2025-12-25 14:47:25,436 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 14:47:25,436 | INFO | ✅ Unit details scraped
+2025-12-25 14:47:26,957 | INFO | ✅ Returned to listing
+2025-12-25 14:47:26,992 | INFO | ✅ [3] Open: 10024-4 TAMAN BUKIT LARANG INDAH
+2025-12-25 14:47:31,802 | INFO | ✅ Opened project detail
+2025-12-25 14:47:35,616 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:47:35,626 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 14:47:35,653 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 14:47:39,463 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 14:47:39,478 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 14:47:39,478 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 14:47:39,641 | INFO | ✅ Status table rows = 2
+2025-12-25 14:47:43,452 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:47:48,291 | INFO | ✅ Unit modal opened
+2025-12-25 14:47:52,183 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 14:48:01,902 | INFO | ✅ Unit rows scraped = 287
+2025-12-25 14:48:04,223 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 14:48:04,223 | INFO | ✅ Unit details scraped
+2025-12-25 14:48:05,744 | INFO | ✅ Returned to listing
+2025-12-25 14:48:05,780 | INFO | ✅ [4] Open: 10024-3 TAMAN SENTOSA
+2025-12-25 14:48:10,590 | INFO | ✅ Opened project detail
+2025-12-25 14:48:14,410 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:48:14,424 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 14:48:14,459 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 14:48:18,273 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 14:48:18,288 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 14:48:18,288 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 14:48:18,378 | INFO | ✅ Status table rows = 1
+2025-12-25 14:48:22,190 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:48:27,042 | INFO | ✅ Unit modal opened
+2025-12-25 14:48:30,917 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 14:48:35,142 | INFO | ✅ Unit rows scraped = 127
+2025-12-25 14:48:37,461 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 14:48:37,461 | INFO | ✅ Unit details scraped
+2025-12-25 14:48:38,979 | INFO | ✅ Returned to listing
+2025-12-25 14:48:39,015 | INFO | ✅ [5] Open: 10024-1 TAMAN SENTOSA
+2025-12-25 14:48:43,816 | INFO | ✅ Opened project detail
+2025-12-25 14:48:47,628 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:48:47,639 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-25 14:48:47,664 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 14:48:51,474 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 14:48:51,486 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 14:48:51,486 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-25 14:48:51,632 | INFO | ✅ Status table rows = 2
+2025-12-25 14:48:55,454 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 14:49:00,291 | INFO | ✅ Unit modal opened
+2025-12-25 14:49:04,150 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 14:49:08,357 | INFO | ✅ Unit rows scraped = 127
+2025-12-25 14:49:10,666 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 14:49:10,666 | INFO | ✅ Unit details scraped
+2025-12-25 14:49:12,194 | INFO | ✅ Returned to listing
+2025-12-25 14:49:12,437 | INFO | ✅ No next page. Pagination done.
+2025-12-25 14:49:12,438 | INFO | ✅ Saved CSV: ./data/pemaju/RIVERWELL RESOURCES/RIVERWELL RESOURCES_MELAKA_ALL_PROJECTS_20251225.csv
+2025-12-25 14:49:12,438 | INFO | ✅ Saved CSV: ./data/pemaju/RIVERWELL RESOURCES/RIVERWELL RESOURCES_MELAKA_HOUSE_TYPE_20251225.csv
+2025-12-25 14:49:12,445 | INFO | ✅ Saved CSV: ./data/pemaju/RIVERWELL RESOURCES/RIVERWELL RESOURCES_MELAKA_UNIT_DETAILS_20251225.csv
+2025-12-25 14:49:12,446 | INFO | ✅ SUMMARY: Projects=5, HouseTypes=9, UnitRows=1047
+2025-12-25 14:49:12,446 | INFO | ✅ DONE pemaju scrape
+2025-12-25 14:49:12,515 | INFO | ✅ Chrome driver closed

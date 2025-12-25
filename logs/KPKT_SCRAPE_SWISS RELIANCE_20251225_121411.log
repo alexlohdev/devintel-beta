@@ -1,0 +1,54 @@
+2025-12-25 13:28:47,431 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_SWISS RELIANCE_20251225_121411.log
+2025-12-25 13:28:47,431 | INFO | ✅ Start Pemaju: SWISS RELIANCE
+2025-12-25 13:28:47,431 | INFO | ✅ Output folder: ./data/pemaju/SWISS RELIANCE
+2025-12-25 13:28:47,431 | INFO | ====== WebDriver manager ======
+2025-12-25 13:28:47,496 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 13:28:47,528 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-25 13:28:47,558 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-25 13:28:47,768 | INFO | ✅ Chrome started (headless=True)
+2025-12-25 13:28:53,628 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-25 13:28:58,256 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-25 13:29:02,870 | INFO | ✅ Negeri = Melaka
+2025-12-25 13:29:04,470 | INFO | ✅ Kata Kunci = SWISS RELIANCE
+2025-12-25 13:29:06,787 | INFO | ✅ Clicked CARI
+2025-12-25 13:29:06,807 | INFO | ✅ Results table loaded
+2025-12-25 13:29:06,807 | INFO | ✅ Processing listing page 1
+2025-12-25 13:29:06,864 | INFO | ✅ [1] Open: 30761-2 TAMAN REMBIA INDAH
+2025-12-25 13:29:11,672 | INFO | ✅ Opened project detail
+2025-12-25 13:29:15,505 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 13:29:15,521 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-25 13:29:15,556 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 13:29:19,374 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 13:29:19,387 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 13:29:19,388 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-25 13:29:19,608 | INFO | ✅ Status table rows = 3
+2025-12-25 13:29:23,422 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 13:29:28,253 | INFO | ✅ Unit modal opened
+2025-12-25 13:29:32,152 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 13:29:41,288 | INFO | ✅ Unit rows scraped = 271
+2025-12-25 13:29:43,625 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 13:29:43,625 | INFO | ✅ Unit details scraped
+2025-12-25 13:29:45,146 | INFO | ✅ Returned to listing
+2025-12-25 13:29:45,180 | INFO | ✅ [2] Open: 30761-1 TAMAN REMBIA INDAH
+2025-12-25 13:29:49,988 | INFO | ✅ Opened project detail
+2025-12-25 13:29:53,819 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 13:29:53,834 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-25 13:29:53,869 | INFO | ✅ Maklumat Projek scraped
+2025-12-25 13:29:57,687 | INFO | ✅ Tab opened: status terkini projek
+2025-12-25 13:29:57,701 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-25 13:29:57,701 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-25 13:29:58,070 | INFO | ✅ Status table rows = 5
+2025-12-25 13:30:01,885 | INFO | ✅ Tab opened: maklumat projek
+2025-12-25 13:30:06,745 | INFO | ✅ Unit modal opened
+2025-12-25 13:30:10,687 | INFO | ✅ Clicked Paparan Senarai
+2025-12-25 13:30:24,171 | INFO | ✅ Unit rows scraped = 391
+2025-12-25 13:30:26,544 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-25 13:30:26,544 | INFO | ✅ Unit details scraped
+2025-12-25 13:30:28,065 | INFO | ✅ Returned to listing
+2025-12-25 13:30:28,081 | INFO | ✅ No next page. Pagination done.
+2025-12-25 13:30:28,082 | INFO | ✅ Saved CSV: ./data/pemaju/SWISS RELIANCE/SWISS RELIANCE_MELAKA_ALL_PROJECTS_20251225.csv
+2025-12-25 13:30:28,082 | INFO | ✅ Saved CSV: ./data/pemaju/SWISS RELIANCE/SWISS RELIANCE_MELAKA_HOUSE_TYPE_20251225.csv
+2025-12-25 13:30:28,087 | INFO | ✅ Saved CSV: ./data/pemaju/SWISS RELIANCE/SWISS RELIANCE_MELAKA_UNIT_DETAILS_20251225.csv
+2025-12-25 13:30:28,087 | INFO | ✅ SUMMARY: Projects=2, HouseTypes=8, UnitRows=662
+2025-12-25 13:30:28,087 | INFO | ✅ DONE pemaju scrape
+2025-12-25 13:30:28,180 | INFO | ✅ Chrome driver closed
