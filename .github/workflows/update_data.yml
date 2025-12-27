@@ -23,10 +23,11 @@ jobs:
           pip install pandas sqlalchemy psycopg2-binary toml
 
       - name: Run Publisher Script
-        env:
+       env:
           DB_PASS: ${{ secrets.DB_PASS }}
-          DB_HOST: "db.fvrzvqamufqfjqufxfqp.supabase.co"
-          DB_PORT: "5432"
+          DB_HOST: "aws-0-ap-southeast-1.pooler.supabase.com"  # The IPv4 Pooler
+          DB_PORT: "6543"                                      # Pooler Port
           DB_NAME: "postgres"
-          DB_USER: "postgres"
+          DB_USER: "postgres.fvrzvqamufqfjqufxfqp"             # <--- FIX: Username format
+          # Note: The format MUST be 'postgres.[YOUR_PROJECT_ID]' for port 6543
         run: python publish_data.py
