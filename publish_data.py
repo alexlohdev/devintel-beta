@@ -35,8 +35,6 @@ def process_and_upload():
 
     # 1. READ ALL CSV FILES
     # ---------------------------------------------------------
-    # Finds the latest file for each category in the folders
-    # Assumes structure: data/pemaju/DEVELOPER_NAME/....csv
     all_units = []
     all_projects = []
     all_houses = []
@@ -45,13 +43,11 @@ def process_and_upload():
         for file in files:
             full_path = os.path.join(root, file)
             
-            # Simple logic: Read everything. 
-            # (Ideally, your scraper should clean the folder or you filter by date here)
+            # --- A. UNIT DETAILS ---
             if "_MELAKA_UNIT_DETAILS_" in file:
                 df = pd.read_csv(full_path)
-                # Normalize columns to English for DB
                 rename_map = {
-                    "Kod Projek & Nama Projek": "project_name_raw", # Temp col to split later
+                    "Kod Projek & Nama Projek": "project_name_raw",
                     "Kod Pemaju & Nama Pemaju": "pemaju_name",
                     "No. Permit": "permit_no",
                     "No Unit": "unit_no",
@@ -61,40 +57,47 @@ def process_and_upload():
                     "Scraped_Date": "scraped_date",
                     "Scraped_Timestamp": "scraped_timestamp"
                 }
-                # Only keep cols we need + rename
                 df = df.rename(columns=rename_map)
-                # Split Code and Name
+                
                 if "project_name_raw" in df.columns:
                     split = df["project_name_raw"].str.split(n=1, expand=True)
                     df["project_code"] = split[0]
                     df["project_name"] = split[1] if split.shape[1] > 1 else ""
                 all_units.append(df)
 
+            # --- B. PROJECTS MASTER ---
             elif "_MELAKA_ALL_PROJECTS_" in file:
                 df = pd.read_csv(full_path)
                 rename_map = {
                     "Kod Projek & Nama Projek": "project_name_raw",
                     "Kod Pemaju & Nama Pemaju": "pemaju_name",
+                    "No. Permit": "permit_no",
+                    "Status Projek Keseluruhan": "status_overall",
+                    "Maklumat Pembangunan": "development_info",
+                    "Daerah Projek": "location_district",
+                    "Negeri Projek": "location_state",
+                    "Tarikh Sah Laku Permit Terkini": "permit_valid_date",
                     "Scraped_Date": "scraped_date",
                     "Scraped_Timestamp": "scraped_timestamp"
-                    # Add other columns if you want them in projects_master
                 }
                 df = df.rename(columns=rename_map)
+                
                 if "project_name_raw" in df.columns:
                     split = df["project_name_raw"].str.split(n=1, expand=True)
                     df["project_code"] = split[0]
                     df["project_name"] = split[1] if split.shape[1] > 1 else ""
                 all_projects.append(df)
 
+            # --- C. HOUSE TYPES ---
             elif "_MELAKA_HOUSE_TYPE_" in file:
                 df = pd.read_csv(full_path)
-                # Add mapping for house type if needed
+                # We will rename these later in bulk
                 all_houses.append(df)
 
     # Combine into single DataFrames
     df_units_final = pd.concat(all_units, ignore_index=True) if all_units else pd.DataFrame()
     df_projects_final = pd.concat(all_projects, ignore_index=True) if all_projects else pd.DataFrame()
-    # df_houses_final... (similarly)
+    df_houses_final = pd.concat(all_houses, ignore_index=True) if all_houses else pd.DataFrame()
 
     if df_units_final.empty:
         print("⚠️ No unit data found. Aborting.")
@@ -106,21 +109,52 @@ def process_and_upload():
     with engine.begin() as conn:
         conn.execute(text("TRUNCATE TABLE units_detail RESTART IDENTITY;"))
         conn.execute(text("TRUNCATE TABLE projects_master RESTART IDENTITY;"))
-        # conn.execute(text("TRUNCATE TABLE house_types RESTART IDENTITY;"))
+        conn.execute(text("TRUNCATE TABLE house_types RESTART IDENTITY;"))
     
-    # Upload fresh data
-    # (Ensure your DataFrame columns match Supabase columns exactly!)
-    # You might need a final filter here to match specific DB columns
-    # For this example, I assume your DF headers match the DB English headers we set up.
-    
-    # Selecting only columns that exist in DB to prevent errors
+    # --- 2a. UPLOAD UNITS DETAIL ---
     valid_unit_cols = ["project_code", "project_name", "pemaju_name", "permit_no", "unit_no", "price_sales", "status", "bumi_quota", "scraped_date", "scraped_timestamp"]
-    df_units_upload = df_units_final[valid_unit_cols].copy()
+    # Filter to only columns that exist
+    cols_to_use = [c for c in valid_unit_cols if c in df_units_final.columns]
+    df_units_upload = df_units_final[cols_to_use].copy()
     
     df_units_upload.to_sql("units_detail", engine, if_exists="append", index=False)
     print(f"   -> Uploaded {len(df_units_upload)} rows to units_detail")
     
-    # Do the same for projects_master...
+    # --- 2b. UPLOAD PROJECTS MASTER ---
+    if not df_projects_final.empty:
+        valid_proj_cols = [
+            "project_code", "project_name", "pemaju_name", "permit_no", 
+            "status_overall", "development_info", "location_district", 
+            "location_state", "permit_valid_date", "scraped_date", "scraped_timestamp"
+        ]
+        cols_to_use = [c for c in valid_proj_cols if c in df_projects_final.columns]
+        df_projects_upload = df_projects_final[cols_to_use].copy()
+        
+        df_projects_upload.to_sql("projects_master", engine, if_exists="append", index=False)
+        print(f"   -> Uploaded {len(df_projects_upload)} rows to projects_master")
+
+    # --- 2c. UPLOAD HOUSE TYPES ---
+    if not df_houses_final.empty:
+         # Rename columns here
+         rename_house = {
+            "Kod Projek": "project_code", "Nama Projek": "project_name", 
+            "Jenis Rumah": "house_type", "Bil Tingkat": "num_floors", 
+            "Bil Bilik": "num_rooms", "Bil Tandas": "num_bathrooms",
+            "Keluasan Binaan (Mps)": "built_up_size", "Bil.Unit": "total_units",
+            "Harga Minimum (RM)": "price_min", "Harga Maksimum (RM)": "price_max",
+            "Peratus Sebenar %": "percent_actual", "Status Komponen": "component_status",
+            "Tarikh CCC/CFO": "date_ccc_cfo", "Tarikh VP": "date_vp",
+            "Scraped_Date": "scraped_date", "Scraped_Timestamp": "scraped_timestamp"
+         }
+         df_houses_final = df_houses_final.rename(columns=rename_house)
+         
+         valid_house_cols = list(rename_house.values())
+         cols_to_use = [c for c in valid_house_cols if c in df_houses_final.columns]
+         df_houses_upload = df_houses_final[cols_to_use].copy()
+
+         df_houses_upload.to_sql("house_types", engine, if_exists="append", index=False)
+         print(f"   -> Uploaded {len(df_houses_upload)} rows to house_types")
+
 
     # 3. GENERATE & UPLOAD HISTORY LOGS
     # ---------------------------------------------------------
