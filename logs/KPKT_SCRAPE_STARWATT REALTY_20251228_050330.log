@@ -1,0 +1,70 @@
+2025-12-28 06:19:55,308 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_STARWATT REALTY_20251228_050330.log
+2025-12-28 06:19:55,308 | INFO | ✅ Start Pemaju: STARWATT REALTY
+2025-12-28 06:19:55,308 | INFO | ✅ Output folder: ./data/pemaju/STARWATT REALTY
+2025-12-28 06:19:55,308 | INFO | ====== WebDriver manager ======
+2025-12-28 06:19:55,376 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 06:19:55,421 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 06:19:55,466 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 06:19:55,683 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 06:20:02,374 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 06:20:07,004 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 06:20:11,654 | INFO | ✅ Negeri = Melaka
+2025-12-28 06:20:13,253 | INFO | ✅ Kata Kunci = STARWATT REALTY
+2025-12-28 06:20:15,572 | INFO | ✅ Clicked CARI
+2025-12-28 06:20:15,587 | INFO | ✅ Results table loaded
+2025-12-28 06:20:15,587 | INFO | ✅ Processing listing page 1
+2025-12-28 06:20:15,645 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 06:20:20,452 | INFO | ✅ Opened project detail
+2025-12-28 06:20:24,285 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:20:24,302 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:20:24,335 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:20:28,152 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:20:28,166 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:20:28,166 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 06:20:28,390 | INFO | ✅ Status table rows = 3
+2025-12-28 06:20:32,214 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:20:37,044 | INFO | ✅ Unit modal opened
+2025-12-28 06:20:40,901 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:20:42,544 | INFO | ✅ Unit rows scraped = 49
+2025-12-28 06:20:44,909 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:20:44,909 | INFO | ✅ Unit details scraped
+2025-12-28 06:20:46,426 | INFO | ✅ Returned to listing
+2025-12-28 06:20:46,460 | INFO | ✅ [2] Open: 12417-2 8 RESIDEN VILLA & LINK
+2025-12-28 06:20:51,262 | INFO | ✅ Opened project detail
+2025-12-28 06:20:55,080 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:20:55,093 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:20:55,119 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:20:58,944 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:20:58,957 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:20:58,957 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:20:59,253 | INFO | ✅ Status table rows = 4
+2025-12-28 06:21:03,074 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:21:07,895 | INFO | ✅ Unit modal opened
+2025-12-28 06:21:11,759 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:21:16,656 | INFO | ✅ Unit rows scraped = 146
+2025-12-28 06:21:18,963 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:21:18,964 | INFO | ✅ Unit details scraped
+2025-12-28 06:21:20,481 | INFO | ✅ Returned to listing
+2025-12-28 06:21:20,515 | INFO | ✅ [3] Open: 12417-1 8 RESIDEN VILLA & LINK
+2025-12-28 06:21:25,316 | INFO | ✅ Opened project detail
+2025-12-28 06:21:29,130 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:21:29,143 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:21:29,168 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:21:32,980 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:21:32,994 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:21:32,994 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:21:33,670 | INFO | ✅ Status table rows = 10
+2025-12-28 06:21:37,486 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:21:42,321 | INFO | ✅ Unit modal opened
+2025-12-28 06:21:46,166 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:21:50,261 | INFO | ✅ Unit rows scraped = 123
+2025-12-28 06:21:52,621 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:21:52,622 | INFO | ✅ Unit details scraped
+2025-12-28 06:21:54,139 | INFO | ✅ Returned to listing
+2025-12-28 06:21:54,411 | INFO | ✅ No next page. Pagination done.
+2025-12-28 06:21:54,411 | INFO | ✅ Saved CSV: ./data/pemaju/STARWATT REALTY/STARWATT REALTY_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 06:21:54,412 | INFO | ✅ Saved CSV: ./data/pemaju/STARWATT REALTY/STARWATT REALTY_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 06:21:54,414 | INFO | ✅ Saved CSV: ./data/pemaju/STARWATT REALTY/STARWATT REALTY_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 06:21:54,414 | INFO | ✅ SUMMARY: Projects=3, HouseTypes=17, UnitRows=318
+2025-12-28 06:21:54,415 | INFO | ✅ DONE pemaju scrape
+2025-12-28 06:21:54,507 | INFO | ✅ Chrome driver closed

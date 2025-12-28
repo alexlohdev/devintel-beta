@@ -1,0 +1,198 @@
+2025-12-28 05:08:18,633 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_BINTANG URUSJUTA_20251228_050330.log
+2025-12-28 05:08:18,633 | INFO | ✅ Start Pemaju: BINTANG URUSJUTA
+2025-12-28 05:08:18,633 | INFO | ✅ Output folder: ./data/pemaju/BINTANG URUSJUTA
+2025-12-28 05:08:18,633 | INFO | ====== WebDriver manager ======
+2025-12-28 05:08:18,701 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:08:18,747 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:08:18,791 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 05:08:19,001 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 05:08:25,691 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 05:08:30,323 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 05:08:34,963 | INFO | ✅ Negeri = Melaka
+2025-12-28 05:08:36,575 | INFO | ✅ Kata Kunci = BINTANG URUSJUTA
+2025-12-28 05:08:38,896 | INFO | ✅ Clicked CARI
+2025-12-28 05:08:38,912 | INFO | ✅ Results table loaded
+2025-12-28 05:08:38,912 | INFO | ✅ Processing listing page 1
+2025-12-28 05:08:38,974 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 05:08:43,783 | INFO | ✅ Opened project detail
+2025-12-28 05:08:47,610 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:08:47,623 | INFO | ✅ Daerah Projek = '-'
+2025-12-28 05:08:47,659 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:08:51,473 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:08:51,489 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:08:51,489 | INFO | ✅ Status Keseluruhan = Belum Mula
+2025-12-28 05:08:51,666 | INFO | ✅ Status table rows = 2
+2025-12-28 05:08:55,481 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:09:00,317 | INFO | ✅ Unit modal opened
+2025-12-28 05:09:04,169 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:09:05,216 | INFO | ✅ Unit rows scraped = 30
+2025-12-28 05:09:07,542 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:09:07,542 | INFO | ✅ Unit details scraped
+2025-12-28 05:09:09,060 | INFO | ✅ Returned to listing
+2025-12-28 05:09:09,097 | INFO | ✅ [2] Open: 14677-10 TAMAN SERAMBI GAPAM
+2025-12-28 05:09:13,903 | INFO | ✅ Opened project detail
+2025-12-28 05:09:17,722 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:09:17,734 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:09:17,762 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:09:21,580 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:09:21,592 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:09:21,592 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 05:09:21,758 | INFO | ✅ Status table rows = 2
+2025-12-28 05:09:25,593 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:09:30,416 | INFO | ✅ Unit modal opened
+2025-12-28 05:09:34,281 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:09:39,408 | INFO | ✅ Unit rows scraped = 145
+2025-12-28 05:09:41,720 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:09:41,721 | INFO | ✅ Unit details scraped
+2025-12-28 05:09:43,238 | INFO | ✅ Returned to listing
+2025-12-28 05:09:43,277 | INFO | ✅ [3] Open: 14677-9 TAMAN SERAMBI GAPAM
+2025-12-28 05:09:48,081 | INFO | ✅ Opened project detail
+2025-12-28 05:09:51,901 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:09:51,914 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:09:51,942 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:09:55,762 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:09:55,774 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:09:55,775 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 05:09:56,101 | INFO | ✅ Status table rows = 4
+2025-12-28 05:09:59,920 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:10:04,752 | INFO | ✅ Unit modal opened
+2025-12-28 05:10:08,606 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:10:11,336 | INFO | ✅ Unit rows scraped = 77
+2025-12-28 05:10:13,644 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:10:13,644 | INFO | ✅ Unit details scraped
+2025-12-28 05:10:15,162 | INFO | ✅ Returned to listing
+2025-12-28 05:10:15,198 | INFO | ✅ [4] Open: 14677-8 TAMAN ANJUNG GAPAM
+2025-12-28 05:10:20,003 | INFO | ✅ Opened project detail
+2025-12-28 05:10:23,825 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:10:23,838 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:10:23,864 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:10:27,682 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:10:27,696 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:10:27,696 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:10:28,370 | INFO | ✅ Status table rows = 9
+2025-12-28 05:10:32,190 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:10:37,016 | INFO | ✅ Unit modal opened
+2025-12-28 05:10:40,868 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:10:45,188 | INFO | ✅ Unit rows scraped = 123
+2025-12-28 05:10:47,521 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:10:47,521 | INFO | ✅ Unit details scraped
+2025-12-28 05:10:49,039 | INFO | ✅ Returned to listing
+2025-12-28 05:10:49,077 | INFO | ✅ [5] Open: 14677-7 TAMAN ANJUNG GAPAM
+2025-12-28 05:10:53,881 | INFO | ✅ Opened project detail
+2025-12-28 05:10:57,700 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:10:57,712 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:10:57,740 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:11:01,558 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:11:01,569 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:11:01,569 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:11:01,655 | INFO | ✅ Status table rows = 1
+2025-12-28 05:11:05,475 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:11:10,301 | INFO | ✅ Unit modal opened
+2025-12-28 05:11:14,169 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:11:20,363 | INFO | ✅ Unit rows scraped = 180
+2025-12-28 05:11:22,672 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:11:22,672 | INFO | ✅ Unit details scraped
+2025-12-28 05:11:24,189 | INFO | ✅ Returned to listing
+2025-12-28 05:11:24,224 | INFO | ✅ [6] Open: 14677-6 TAMAN ANJUNG GAPAM
+2025-12-28 05:11:29,026 | INFO | ✅ Opened project detail
+2025-12-28 05:11:32,851 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:11:32,867 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:11:32,905 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:11:36,722 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:11:36,737 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:11:36,737 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:11:36,903 | INFO | ✅ Status table rows = 2
+2025-12-28 05:11:40,725 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:11:45,572 | INFO | ✅ Unit modal opened
+2025-12-28 05:11:49,422 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:11:51,972 | INFO | ✅ Unit rows scraped = 75
+2025-12-28 05:11:54,315 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:11:54,316 | INFO | ✅ Unit details scraped
+2025-12-28 05:11:55,833 | INFO | ✅ Returned to listing
+2025-12-28 05:11:55,869 | INFO | ✅ [7] Open: 14677-5 TAMAN ANJUNG GAPAM
+2025-12-28 05:12:00,671 | INFO | ✅ Opened project detail
+2025-12-28 05:12:04,491 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:12:04,504 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:12:04,531 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:12:08,345 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:12:08,357 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:12:08,357 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:12:08,454 | INFO | ✅ Status table rows = 1
+2025-12-28 05:12:12,273 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:12:17,096 | INFO | ✅ Unit modal opened
+2025-12-28 05:12:20,969 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:12:27,101 | INFO | ✅ Unit rows scraped = 180
+2025-12-28 05:12:29,462 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:12:29,463 | INFO | ✅ Unit details scraped
+2025-12-28 05:12:30,980 | INFO | ✅ Returned to listing
+2025-12-28 05:12:31,017 | INFO | ✅ [8] Open: 14677-4 BINTANG URUSJUTA (M) SDN BHD
+2025-12-28 05:12:35,820 | INFO | ✅ Opened project detail
+2025-12-28 05:12:39,645 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:12:39,660 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:12:39,696 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:12:43,514 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:12:43,529 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:12:43,529 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:12:44,025 | INFO | ✅ Status table rows = 7
+2025-12-28 05:12:47,842 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:12:52,684 | INFO | ✅ Unit modal opened
+2025-12-28 05:12:56,551 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:13:00,529 | INFO | ✅ Unit rows scraped = 117
+2025-12-28 05:13:02,845 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:13:02,846 | INFO | ✅ Unit details scraped
+2025-12-28 05:13:04,367 | INFO | ✅ Returned to listing
+2025-12-28 05:13:04,404 | INFO | ✅ [9] Open: 14677-3 TAMAN ANJUNG GAPAM
+2025-12-28 05:13:09,226 | INFO | ✅ Opened project detail
+2025-12-28 05:13:13,043 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:13:13,056 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:13:13,085 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:13:16,900 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:13:16,911 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:13:16,911 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:13:17,132 | INFO | ✅ Status table rows = 3
+2025-12-28 05:13:20,946 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:13:25,786 | INFO | ✅ Unit modal opened
+2025-12-28 05:13:29,640 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:13:32,125 | INFO | ✅ Unit rows scraped = 73
+2025-12-28 05:13:34,487 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:13:34,488 | INFO | ✅ Unit details scraped
+2025-12-28 05:13:36,004 | INFO | ✅ Returned to listing
+2025-12-28 05:13:36,039 | INFO | ✅ [10] Open: 14677-2 TAMAN ANJUNG GAPAM
+2025-12-28 05:13:40,841 | INFO | ✅ Opened project detail
+2025-12-28 05:13:44,657 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:13:44,672 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:13:44,702 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:13:48,519 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:13:48,531 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:13:48,531 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:13:48,821 | INFO | ✅ Status table rows = 4
+2025-12-28 05:13:52,637 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:13:57,459 | INFO | ✅ Unit modal opened
+2025-12-28 05:14:01,316 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:14:05,390 | INFO | ✅ Unit rows scraped = 120
+2025-12-28 05:14:07,700 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:14:07,700 | INFO | ✅ Unit details scraped
+2025-12-28 05:14:09,218 | INFO | ✅ Returned to listing
+2025-12-28 05:14:09,254 | INFO | ✅ [11] Open: 14677-1 TAMAN ANJUNG GAPAM
+2025-12-28 05:14:14,067 | INFO | ✅ Opened project detail
+2025-12-28 05:14:17,887 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:14:17,900 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:14:17,925 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:14:21,739 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:14:21,750 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:14:21,751 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:14:22,047 | INFO | ✅ Status table rows = 4
+2025-12-28 05:14:25,861 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:14:30,689 | INFO | ✅ Unit modal opened
+2025-12-28 05:14:34,550 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:14:39,434 | INFO | ✅ Unit rows scraped = 143
+2025-12-28 05:14:41,796 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:14:41,796 | INFO | ✅ Unit details scraped
+2025-12-28 05:14:43,314 | INFO | ✅ Returned to listing
+2025-12-28 05:14:43,475 | INFO | ✅ No next page. Pagination done.
+2025-12-28 05:14:43,475 | INFO | ✅ Saved CSV: ./data/pemaju/BINTANG URUSJUTA/BINTANG URUSJUTA_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 05:14:43,476 | INFO | ✅ Saved CSV: ./data/pemaju/BINTANG URUSJUTA/BINTANG URUSJUTA_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 05:14:43,485 | INFO | ✅ Saved CSV: ./data/pemaju/BINTANG URUSJUTA/BINTANG URUSJUTA_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 05:14:43,485 | INFO | ✅ SUMMARY: Projects=11, HouseTypes=39, UnitRows=1263
+2025-12-28 05:14:43,485 | INFO | ✅ DONE pemaju scrape
+2025-12-28 05:14:43,582 | INFO | ✅ Chrome driver closed

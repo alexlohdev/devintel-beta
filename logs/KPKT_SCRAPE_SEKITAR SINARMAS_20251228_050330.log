@@ -1,0 +1,38 @@
+2025-12-28 07:14:14,585 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_SEKITAR SINARMAS_20251228_050330.log
+2025-12-28 07:14:14,585 | INFO | ✅ Start Pemaju: SEKITAR SINARMAS
+2025-12-28 07:14:14,585 | INFO | ✅ Output folder: ./data/pemaju/SEKITAR SINARMAS
+2025-12-28 07:14:14,586 | INFO | ====== WebDriver manager ======
+2025-12-28 07:14:14,651 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 07:14:14,698 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 07:14:14,743 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 07:14:14,946 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 07:14:20,868 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 07:14:25,496 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 07:14:30,110 | INFO | ✅ Negeri = Melaka
+2025-12-28 07:14:31,713 | INFO | ✅ Kata Kunci = SEKITAR SINARMAS
+2025-12-28 07:14:34,032 | INFO | ✅ Clicked CARI
+2025-12-28 07:14:34,047 | INFO | ✅ Results table loaded
+2025-12-28 07:14:34,047 | INFO | ✅ Processing listing page 1
+2025-12-28 07:14:34,109 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 07:14:38,918 | INFO | ✅ Opened project detail
+2025-12-28 07:14:42,753 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:14:42,770 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:14:42,804 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:14:46,620 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:14:46,634 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:14:46,634 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 07:14:46,937 | INFO | ✅ Status table rows = 4
+2025-12-28 07:14:50,751 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:14:55,582 | INFO | ✅ Unit modal opened
+2025-12-28 07:14:59,471 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:15:05,497 | INFO | ✅ Unit rows scraped = 178
+2025-12-28 07:15:07,814 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:15:07,814 | INFO | ✅ Unit details scraped
+2025-12-28 07:15:09,336 | INFO | ✅ Returned to listing
+2025-12-28 07:15:09,629 | INFO | ✅ No next page. Pagination done.
+2025-12-28 07:15:09,630 | INFO | ✅ Saved CSV: ./data/pemaju/SEKITAR SINARMAS/SEKITAR SINARMAS_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 07:15:09,630 | INFO | ✅ Saved CSV: ./data/pemaju/SEKITAR SINARMAS/SEKITAR SINARMAS_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 07:15:09,631 | INFO | ✅ Saved CSV: ./data/pemaju/SEKITAR SINARMAS/SEKITAR SINARMAS_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 07:15:09,631 | INFO | ✅ SUMMARY: Projects=1, HouseTypes=4, UnitRows=178
+2025-12-28 07:15:09,631 | INFO | ✅ DONE pemaju scrape
+2025-12-28 07:15:09,699 | INFO | ✅ Chrome driver closed

@@ -1,0 +1,214 @@
+2025-12-28 05:39:16,020 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_FIXMAX ENTITY_20251228_050330.log
+2025-12-28 05:39:16,020 | INFO | ✅ Start Pemaju: FIXMAX ENTITY
+2025-12-28 05:39:16,020 | INFO | ✅ Output folder: ./data/pemaju/FIXMAX ENTITY
+2025-12-28 05:39:16,020 | INFO | ====== WebDriver manager ======
+2025-12-28 05:39:16,087 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:39:16,140 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:39:16,187 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 05:39:16,391 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 05:39:23,301 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 05:39:27,935 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 05:39:32,547 | INFO | ✅ Negeri = Melaka
+2025-12-28 05:39:34,145 | INFO | ✅ Kata Kunci = FIXMAX ENTITY
+2025-12-28 05:39:36,462 | INFO | ✅ Clicked CARI
+2025-12-28 05:39:36,477 | INFO | ✅ Results table loaded
+2025-12-28 05:39:36,477 | INFO | ✅ Processing listing page 1
+2025-12-28 05:39:36,537 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 05:39:41,346 | INFO | ✅ Opened project detail
+2025-12-28 05:39:45,172 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:39:45,186 | INFO | ✅ Daerah Projek = '-'
+2025-12-28 05:39:45,221 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:39:49,042 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:39:49,057 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:39:49,057 | INFO | ✅ Status Keseluruhan = Belum Mula
+2025-12-28 05:39:49,216 | INFO | ✅ Status table rows = 2
+2025-12-28 05:39:53,029 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:39:57,856 | INFO | ✅ Unit modal opened
+2025-12-28 05:40:01,699 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:40:02,747 | INFO | ✅ Unit rows scraped = 30
+2025-12-28 05:40:05,062 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:40:05,062 | INFO | ✅ Unit details scraped
+2025-12-28 05:40:06,580 | INFO | ✅ Returned to listing
+2025-12-28 05:40:06,615 | INFO | ✅ [2] Open: 19373-11 TAMAN PERLING IMPIAN
+2025-12-28 05:40:11,419 | INFO | ✅ Opened project detail
+2025-12-28 05:40:15,238 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:40:15,251 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:40:15,278 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:40:19,093 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:40:19,105 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:40:19,105 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 05:40:19,410 | INFO | ✅ Status table rows = 4
+2025-12-28 05:40:23,227 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:40:28,054 | INFO | ✅ Unit modal opened
+2025-12-28 05:40:31,934 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:40:39,667 | INFO | ✅ Unit rows scraped = 222
+2025-12-28 05:40:41,987 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:40:41,987 | INFO | ✅ Unit details scraped
+2025-12-28 05:40:43,508 | INFO | ✅ Returned to listing
+2025-12-28 05:40:43,543 | INFO | ✅ [3] Open: 19373-10 IMPIANA @ LOT PT 6591 MUKIM PAYA RUMPUT
+2025-12-28 05:40:48,354 | INFO | ✅ Opened project detail
+2025-12-28 05:40:52,173 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:40:52,189 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:40:52,225 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:40:56,041 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:40:56,057 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:40:56,057 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 05:40:56,278 | INFO | ✅ Status table rows = 3
+2025-12-28 05:41:00,094 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:41:04,936 | INFO | ✅ Unit modal opened
+2025-12-28 05:41:08,791 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:41:11,948 | INFO | ✅ Unit rows scraped = 90
+2025-12-28 05:41:14,257 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:41:14,257 | INFO | ✅ Unit details scraped
+2025-12-28 05:41:15,775 | INFO | ✅ Returned to listing
+2025-12-28 05:41:15,813 | INFO | ✅ [4] Open: 19373-9 TAMAN VISTA BELIMBING
+2025-12-28 05:41:20,617 | INFO | ✅ Opened project detail
+2025-12-28 05:41:24,439 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:41:24,453 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:41:24,481 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:41:28,298 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:41:28,311 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:41:28,311 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:41:28,481 | INFO | ✅ Status table rows = 2
+2025-12-28 05:41:32,301 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:41:37,123 | INFO | ✅ Unit modal opened
+2025-12-28 05:41:40,973 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:41:43,620 | INFO | ✅ Unit rows scraped = 77
+2025-12-28 05:41:45,976 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:41:45,976 | INFO | ✅ Unit details scraped
+2025-12-28 05:41:47,493 | INFO | ✅ Returned to listing
+2025-12-28 05:41:47,529 | INFO | ✅ [5] Open: 19373-8 TAMAN VISTA BELIMBING
+2025-12-28 05:41:52,334 | INFO | ✅ Opened project detail
+2025-12-28 05:41:56,152 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:41:56,165 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:41:56,192 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:42:00,005 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:42:00,021 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:42:00,021 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:42:00,113 | INFO | ✅ Status table rows = 1
+2025-12-28 05:42:03,927 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:42:08,757 | INFO | ✅ Unit modal opened
+2025-12-28 05:42:12,587 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:42:12,712 | INFO | ✅ Unit rows scraped = 3
+2025-12-28 05:42:15,033 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:42:15,033 | INFO | ✅ Unit details scraped
+2025-12-28 05:42:16,551 | INFO | ✅ Returned to listing
+2025-12-28 05:42:16,588 | INFO | ✅ [6] Open: 19373-7 TAMAN VISTA BELIMBING
+2025-12-28 05:42:21,391 | INFO | ✅ Opened project detail
+2025-12-28 05:42:25,209 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:42:25,221 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:42:25,249 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:42:29,065 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:42:29,079 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:42:29,079 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:42:29,241 | INFO | ✅ Status table rows = 2
+2025-12-28 05:42:33,056 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:42:37,877 | INFO | ✅ Unit modal opened
+2025-12-28 05:42:41,724 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:42:45,036 | INFO | ✅ Unit rows scraped = 98
+2025-12-28 05:42:47,393 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:42:47,393 | INFO | ✅ Unit details scraped
+2025-12-28 05:42:48,911 | INFO | ✅ Returned to listing
+2025-12-28 05:42:48,949 | INFO | ✅ [7] Open: 19373-6 TAMAN VISTA BELIMBING
+2025-12-28 05:42:53,754 | INFO | ✅ Opened project detail
+2025-12-28 05:42:57,573 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:42:57,585 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:42:57,614 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:43:01,429 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:43:01,442 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:43:01,442 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:43:01,542 | INFO | ✅ Status table rows = 1
+2025-12-28 05:43:05,357 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:43:10,183 | INFO | ✅ Unit modal opened
+2025-12-28 05:43:14,028 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:43:16,179 | INFO | ✅ Unit rows scraped = 64
+2025-12-28 05:43:18,532 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:43:18,532 | INFO | ✅ Unit details scraped
+2025-12-28 05:43:20,049 | INFO | ✅ Returned to listing
+2025-12-28 05:43:20,084 | INFO | ✅ [8] Open: 19373-5 TAMAN VISTA BELIMBING
+2025-12-28 05:43:24,888 | INFO | ✅ Opened project detail
+2025-12-28 05:43:28,712 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:43:28,726 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:43:28,751 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:43:32,565 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:43:32,577 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:43:32,577 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:43:32,725 | INFO | ✅ Status table rows = 2
+2025-12-28 05:43:36,540 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:43:41,373 | INFO | ✅ Unit modal opened
+2025-12-28 05:43:45,204 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:43:46,793 | INFO | ✅ Unit rows scraped = 45
+2025-12-28 05:43:49,151 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:43:49,151 | INFO | ✅ Unit details scraped
+2025-12-28 05:43:50,669 | INFO | ✅ Returned to listing
+2025-12-28 05:43:50,707 | INFO | ✅ [9] Open: 19373-4 TAMAN VISTA BELIMBING
+2025-12-28 05:43:55,511 | INFO | ✅ Opened project detail
+2025-12-28 05:43:59,332 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:43:59,346 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:43:59,377 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:44:03,193 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:44:03,204 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:44:03,205 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:44:03,364 | INFO | ✅ Status table rows = 2
+2025-12-28 05:44:07,181 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:44:12,006 | INFO | ✅ Unit modal opened
+2025-12-28 05:44:15,858 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:44:17,816 | INFO | ✅ Unit rows scraped = 56
+2025-12-28 05:44:20,123 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:44:20,123 | INFO | ✅ Unit details scraped
+2025-12-28 05:44:21,641 | INFO | ✅ Returned to listing
+2025-12-28 05:44:21,678 | INFO | ✅ [10] Open: 19373-3 TAMAN BERTAM IMPIAN
+2025-12-28 05:44:26,483 | INFO | ✅ Opened project detail
+2025-12-28 05:44:30,303 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:44:30,316 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:44:30,342 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:44:34,160 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:44:34,173 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:44:34,173 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:44:34,342 | INFO | ✅ Status table rows = 2
+2025-12-28 05:44:38,164 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:44:42,993 | INFO | ✅ Unit modal opened
+2025-12-28 05:44:46,841 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:44:48,075 | INFO | ✅ Unit rows scraped = 34
+2025-12-28 05:44:50,384 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:44:50,384 | INFO | ✅ Unit details scraped
+2025-12-28 05:44:51,902 | INFO | ✅ Returned to listing
+2025-12-28 05:44:51,940 | INFO | ✅ [11] Open: 19373-2 TAMAN BERTAM IMPIAN
+2025-12-28 05:44:56,750 | INFO | ✅ Opened project detail
+2025-12-28 05:45:00,571 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:45:00,585 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:45:00,611 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:45:04,428 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:45:04,440 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:45:04,440 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-28 05:45:04,602 | INFO | ✅ Status table rows = 2
+2025-12-28 05:45:08,418 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:45:13,250 | INFO | ✅ Unit modal opened
+2025-12-28 05:45:17,118 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:45:22,205 | INFO | ✅ Unit rows scraped = 147
+2025-12-28 05:45:24,566 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:45:24,567 | INFO | ✅ Unit details scraped
+2025-12-28 05:45:26,084 | INFO | ✅ Returned to listing
+2025-12-28 05:45:26,121 | INFO | ✅ [12] Open: 19373-1 TAMAN VISTA BELIMBING
+2025-12-28 05:45:30,924 | INFO | ✅ Opened project detail
+2025-12-28 05:45:34,748 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:45:34,764 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:45:34,801 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:45:38,626 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:45:38,640 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:45:38,641 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:45:38,807 | INFO | ✅ Status table rows = 2
+2025-12-28 05:45:42,629 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:45:47,476 | INFO | ✅ Unit modal opened
+2025-12-28 05:45:51,355 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:45:55,930 | INFO | ✅ Unit rows scraped = 131
+2025-12-28 05:45:58,239 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:45:58,239 | INFO | ✅ Unit details scraped
+2025-12-28 05:45:59,760 | INFO | ✅ Returned to listing
+2025-12-28 05:45:59,901 | INFO | ✅ No next page. Pagination done.
+2025-12-28 05:45:59,901 | INFO | ✅ Saved CSV: ./data/pemaju/FIXMAX ENTITY/FIXMAX ENTITY_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 05:45:59,902 | INFO | ✅ Saved CSV: ./data/pemaju/FIXMAX ENTITY/FIXMAX ENTITY_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 05:45:59,909 | INFO | ✅ Saved CSV: ./data/pemaju/FIXMAX ENTITY/FIXMAX ENTITY_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 05:45:59,909 | INFO | ✅ SUMMARY: Projects=12, HouseTypes=25, UnitRows=997
+2025-12-28 05:45:59,909 | INFO | ✅ DONE pemaju scrape
+2025-12-28 05:46:00,010 | INFO | ✅ Chrome driver closed

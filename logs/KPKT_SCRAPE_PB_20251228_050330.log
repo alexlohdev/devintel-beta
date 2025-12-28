@@ -1,0 +1,246 @@
+2025-12-28 06:02:22,942 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_PB_20251228_050330.log
+2025-12-28 06:02:22,942 | INFO | ✅ Start Pemaju: PB
+2025-12-28 06:02:22,942 | INFO | ✅ Output folder: ./data/pemaju/PB
+2025-12-28 06:02:22,942 | INFO | ====== WebDriver manager ======
+2025-12-28 06:02:23,008 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 06:02:23,054 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 06:02:23,100 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 06:02:23,303 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 06:02:28,986 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 06:02:33,619 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 06:02:38,233 | INFO | ✅ Negeri = Melaka
+2025-12-28 06:02:39,820 | INFO | ✅ Kata Kunci = PB
+2025-12-28 06:02:42,137 | INFO | ✅ Clicked CARI
+2025-12-28 06:02:42,152 | INFO | ✅ Results table loaded
+2025-12-28 06:02:42,152 | INFO | ✅ Processing listing page 1
+2025-12-28 06:02:42,211 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 06:02:47,018 | INFO | ✅ Opened project detail
+2025-12-28 06:02:50,851 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:02:50,867 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:02:50,901 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:02:54,718 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:02:54,733 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:02:54,733 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 06:02:54,832 | INFO | ✅ Status table rows = 1
+2025-12-28 06:02:58,652 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:03:03,484 | INFO | ✅ Unit modal opened
+2025-12-28 06:03:07,336 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:03:10,039 | INFO | ✅ Unit rows scraped = 82
+2025-12-28 06:03:12,353 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:03:12,353 | INFO | ✅ Unit details scraped
+2025-12-28 06:03:13,871 | INFO | ✅ Returned to listing
+2025-12-28 06:03:13,906 | INFO | ✅ [2] Open: 8187-16 TAMAN KRUBONG HEIGHTS PRESINT PELANGI 3
+2025-12-28 06:03:18,709 | INFO | ✅ Opened project detail
+2025-12-28 06:03:22,526 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:03:22,538 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:03:22,563 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:03:26,383 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:03:26,395 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:03:26,395 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 06:03:26,692 | INFO | ✅ Status table rows = 4
+2025-12-28 06:03:30,512 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:03:35,335 | INFO | ✅ Unit modal opened
+2025-12-28 06:03:39,181 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:03:42,931 | INFO | ✅ Unit rows scraped = 112
+2025-12-28 06:03:45,273 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:03:45,273 | INFO | ✅ Unit details scraped
+2025-12-28 06:03:46,792 | INFO | ✅ Returned to listing
+2025-12-28 06:03:46,831 | INFO | ✅ [3] Open: 8187-15 TAMAN KRUBONG HEIGHTS
+2025-12-28 06:03:51,633 | INFO | ✅ Opened project detail
+2025-12-28 06:03:55,450 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:03:55,462 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:03:55,488 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:03:59,300 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:03:59,312 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:03:59,312 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 06:03:59,393 | INFO | ✅ Status table rows = 1
+2025-12-28 06:04:03,205 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:04:08,028 | INFO | ✅ Unit modal opened
+2025-12-28 06:04:11,871 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:04:14,960 | INFO | ✅ Unit rows scraped = 92
+2025-12-28 06:04:17,267 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:04:17,267 | INFO | ✅ Unit details scraped
+2025-12-28 06:04:18,785 | INFO | ✅ Returned to listing
+2025-12-28 06:04:18,820 | INFO | ✅ [4] Open: 8187-14 TAMAN KRUBONG HEIGHTS
+2025-12-28 06:04:23,622 | INFO | ✅ Opened project detail
+2025-12-28 06:04:27,438 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:04:27,450 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:04:27,484 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:04:31,298 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:04:31,309 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:04:31,309 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:04:31,392 | INFO | ✅ Status table rows = 1
+2025-12-28 06:04:35,211 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:04:40,038 | INFO | ✅ Unit modal opened
+2025-12-28 06:04:43,874 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:04:46,274 | INFO | ✅ Unit rows scraped = 69
+2025-12-28 06:04:48,584 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:04:48,584 | INFO | ✅ Unit details scraped
+2025-12-28 06:04:50,102 | INFO | ✅ Returned to listing
+2025-12-28 06:04:50,138 | INFO | ✅ [5] Open: 8187-13 TAMAN KRUBONG HEIGHTS
+2025-12-28 06:04:54,940 | INFO | ✅ Opened project detail
+2025-12-28 06:04:58,763 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:04:58,776 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:04:58,801 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:05:02,614 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:05:02,627 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:05:02,627 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:05:02,721 | INFO | ✅ Status table rows = 1
+2025-12-28 06:05:06,540 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:05:11,364 | INFO | ✅ Unit modal opened
+2025-12-28 06:05:15,207 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:05:17,819 | INFO | ✅ Unit rows scraped = 77
+2025-12-28 06:05:20,125 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:05:20,125 | INFO | ✅ Unit details scraped
+2025-12-28 06:05:21,643 | INFO | ✅ Returned to listing
+2025-12-28 06:05:21,678 | INFO | ✅ [6] Open: 8187-12 TAMAN KRUBONG HEIGHTS
+2025-12-28 06:05:26,479 | INFO | ✅ Opened project detail
+2025-12-28 06:05:30,296 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:05:30,309 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:05:30,334 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:05:34,147 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:05:34,159 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:05:34,159 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:05:34,442 | INFO | ✅ Status table rows = 4
+2025-12-28 06:05:38,260 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:05:43,081 | INFO | ✅ Unit modal opened
+2025-12-28 06:05:46,951 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:05:53,652 | INFO | ✅ Unit rows scraped = 199
+2025-12-28 06:05:55,961 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:05:55,961 | INFO | ✅ Unit details scraped
+2025-12-28 06:05:57,478 | INFO | ✅ Returned to listing
+2025-12-28 06:05:57,514 | INFO | ✅ [7] Open: 8187-11 TAMAN KRUBONG HEIGHTS
+2025-12-28 06:06:02,316 | INFO | ✅ Opened project detail
+2025-12-28 06:06:06,132 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:06:06,145 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:06:06,170 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:06:09,984 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:06:09,995 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:06:09,995 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:06:10,079 | INFO | ✅ Status table rows = 1
+2025-12-28 06:06:13,905 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:06:18,735 | INFO | ✅ Unit modal opened
+2025-12-28 06:06:22,589 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:06:25,160 | INFO | ✅ Unit rows scraped = 76
+2025-12-28 06:06:27,478 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:06:27,478 | INFO | ✅ Unit details scraped
+2025-12-28 06:06:28,995 | INFO | ✅ Returned to listing
+2025-12-28 06:06:29,031 | INFO | ✅ [8] Open: 8187-10 TAMAN KRUBONG HEIGHTS
+2025-12-28 06:06:33,832 | INFO | ✅ Opened project detail
+2025-12-28 06:06:37,648 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:06:37,660 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:06:37,686 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:06:41,500 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:06:41,510 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:06:41,511 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:06:41,594 | INFO | ✅ Status table rows = 1
+2025-12-28 06:06:45,411 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:06:50,234 | INFO | ✅ Unit modal opened
+2025-12-28 06:06:54,122 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:07:02,846 | INFO | ✅ Unit rows scraped = 260
+2025-12-28 06:07:05,155 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:07:05,155 | INFO | ✅ Unit details scraped
+2025-12-28 06:07:06,672 | INFO | ✅ Returned to listing
+2025-12-28 06:07:06,707 | INFO | ✅ [9] Open: 8187-9 TAMAN PAYA RUMPUT INDAH
+2025-12-28 06:07:11,508 | INFO | ✅ Opened project detail
+2025-12-28 06:07:15,339 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:07:15,356 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:07:15,392 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:07:19,210 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:07:19,224 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:07:19,224 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:07:19,314 | INFO | ✅ Status table rows = 1
+2025-12-28 06:07:23,128 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:07:27,973 | INFO | ✅ Unit modal opened
+2025-12-28 06:07:31,829 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:07:34,610 | INFO | ✅ Unit rows scraped = 81
+2025-12-28 06:07:36,972 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:07:36,973 | INFO | ✅ Unit details scraped
+2025-12-28 06:07:38,490 | INFO | ✅ Returned to listing
+2025-12-28 06:07:38,524 | INFO | ✅ [10] Open: 8187-8 PB REALTY SDN. BHD.
+2025-12-28 06:07:43,328 | INFO | ✅ Opened project detail
+2025-12-28 06:07:47,144 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:07:47,157 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:07:47,184 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:07:50,997 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:07:51,008 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:07:51,008 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:07:51,091 | INFO | ✅ Status table rows = 1
+2025-12-28 06:07:54,907 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:07:59,728 | INFO | ✅ Unit modal opened
+2025-12-28 06:08:03,624 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:08:12,073 | INFO | ✅ Unit rows scraped = 251
+2025-12-28 06:08:14,402 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:08:14,402 | INFO | ✅ Unit details scraped
+2025-12-28 06:08:15,919 | INFO | ✅ Returned to listing
+2025-12-28 06:08:15,954 | INFO | ✅ [11] Open: 8187-6 TAMAN KRUBONG JAYA
+2025-12-28 06:08:20,757 | INFO | ✅ Opened project detail
+2025-12-28 06:08:24,577 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:08:24,591 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:08:24,626 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:08:28,441 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:08:28,455 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:08:28,455 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:08:28,757 | INFO | ✅ Status table rows = 4
+2025-12-28 06:08:32,571 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:08:37,412 | INFO | ✅ Unit modal opened
+2025-12-28 06:08:41,327 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:08:49,833 | INFO | ✅ Unit rows scraped = 251
+2025-12-28 06:08:52,167 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:08:52,167 | INFO | ✅ Unit details scraped
+2025-12-28 06:08:53,688 | INFO | ✅ Returned to listing
+2025-12-28 06:08:53,723 | INFO | ✅ [12] Open: 8187-5 TAMAN KRUBONG JAYA
+2025-12-28 06:08:58,533 | INFO | ✅ Opened project detail
+2025-12-28 06:09:02,351 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:09:02,365 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:09:02,400 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:09:06,217 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:09:06,232 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:09:06,232 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:09:07,037 | INFO | ✅ Status table rows = 11
+2025-12-28 06:09:10,850 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:09:15,700 | INFO | ✅ Unit modal opened
+2025-12-28 06:09:19,599 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:09:28,068 | INFO | ✅ Unit rows scraped = 251
+2025-12-28 06:09:30,389 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:09:30,389 | INFO | ✅ Unit details scraped
+2025-12-28 06:09:31,911 | INFO | ✅ Returned to listing
+2025-12-28 06:09:31,946 | INFO | ✅ [13] Open: 8187-4 TAMAN KRUBONG JAYA
+2025-12-28 06:09:36,757 | INFO | ✅ Opened project detail
+2025-12-28 06:09:40,580 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:09:40,594 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:09:40,630 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:09:44,443 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:09:44,457 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:09:44,457 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:09:44,620 | INFO | ✅ Status table rows = 2
+2025-12-28 06:09:48,432 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:09:53,283 | INFO | ✅ Unit modal opened
+2025-12-28 06:09:57,193 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:10:05,652 | INFO | ✅ Unit rows scraped = 251
+2025-12-28 06:10:07,973 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:10:07,973 | INFO | ✅ Unit details scraped
+2025-12-28 06:10:09,495 | INFO | ✅ Returned to listing
+2025-12-28 06:10:09,530 | INFO | ✅ [14] Open: 8187-3 TAMAN SUNGAI RAMBAI INDAH
+2025-12-28 06:10:14,340 | INFO | ✅ Opened project detail
+2025-12-28 06:10:18,166 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:10:18,180 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:10:18,214 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:10:22,030 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:10:22,045 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:10:22,045 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:10:22,138 | INFO | ✅ Status table rows = 1
+2025-12-28 06:10:25,950 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:10:30,800 | INFO | ✅ Unit modal opened
+2025-12-28 06:10:34,709 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:10:43,357 | INFO | ✅ Unit rows scraped = 251
+2025-12-28 06:10:45,674 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:10:45,674 | INFO | ✅ Unit details scraped
+2025-12-28 06:10:47,196 | INFO | ✅ Returned to listing
+2025-12-28 06:10:47,311 | INFO | ✅ No next page. Pagination done.
+2025-12-28 06:10:47,311 | INFO | ✅ Saved CSV: ./data/pemaju/PB/PB_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 06:10:47,312 | INFO | ✅ Saved CSV: ./data/pemaju/PB/PB_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 06:10:47,328 | INFO | ✅ Saved CSV: ./data/pemaju/PB/PB_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 06:10:47,328 | INFO | ✅ SUMMARY: Projects=14, HouseTypes=34, UnitRows=2303
+2025-12-28 06:10:47,328 | INFO | ✅ DONE pemaju scrape
+2025-12-28 06:10:47,426 | INFO | ✅ Chrome driver closed

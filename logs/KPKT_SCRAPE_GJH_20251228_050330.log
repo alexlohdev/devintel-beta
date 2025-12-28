@@ -1,0 +1,198 @@
+2025-12-28 05:19:24,045 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_GJH_20251228_050330.log
+2025-12-28 05:19:24,045 | INFO | ✅ Start Pemaju: GJH
+2025-12-28 05:19:24,046 | INFO | ✅ Output folder: ./data/pemaju/GJH
+2025-12-28 05:19:24,046 | INFO | ====== WebDriver manager ======
+2025-12-28 05:19:24,112 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:19:24,157 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:19:24,202 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 05:19:24,408 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 05:19:30,154 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 05:19:34,787 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 05:19:39,404 | INFO | ✅ Negeri = Melaka
+2025-12-28 05:19:40,988 | INFO | ✅ Kata Kunci = GJH
+2025-12-28 05:19:43,305 | INFO | ✅ Clicked CARI
+2025-12-28 05:19:43,322 | INFO | ✅ Results table loaded
+2025-12-28 05:19:43,322 | INFO | ✅ Processing listing page 1
+2025-12-28 05:19:43,387 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 05:19:48,202 | INFO | ✅ Opened project detail
+2025-12-28 05:19:52,031 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:19:52,047 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:19:52,083 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:19:55,908 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:19:55,924 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:19:55,924 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:19:56,317 | INFO | ✅ Status table rows = 5
+2025-12-28 05:20:00,138 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:20:04,975 | INFO | ✅ Unit modal opened
+2025-12-28 05:20:08,926 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:20:25,059 | INFO | ✅ Unit rows scraped = 471
+2025-12-28 05:20:27,401 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:20:27,401 | INFO | ✅ Unit details scraped
+2025-12-28 05:20:28,921 | INFO | ✅ Returned to listing
+2025-12-28 05:20:28,966 | INFO | ✅ [2] Open: 11508-2 TAMAN PAYA RUMPUT PERDANA FASA 2
+2025-12-28 05:20:33,772 | INFO | ✅ Opened project detail
+2025-12-28 05:20:37,602 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:20:37,619 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:20:37,659 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:20:41,487 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:20:41,502 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:20:41,503 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:20:42,370 | INFO | ✅ Status table rows = 12
+2025-12-28 05:20:46,187 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:20:51,043 | INFO | ✅ Unit modal opened
+2025-12-28 05:20:54,917 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:21:00,202 | INFO | ✅ Unit rows scraped = 154
+2025-12-28 05:21:02,521 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:21:02,521 | INFO | ✅ Unit details scraped
+2025-12-28 05:21:04,045 | INFO | ✅ Returned to listing
+2025-12-28 05:21:04,082 | INFO | ✅ [3] Open: 11508-1 GJH AVENUE SDN BHD
+2025-12-28 05:21:08,893 | INFO | ✅ Opened project detail
+2025-12-28 05:21:12,707 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:21:12,721 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:21:12,761 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:21:16,576 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:21:16,591 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:21:16,591 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:21:17,235 | INFO | ✅ Status table rows = 9
+2025-12-28 05:21:21,049 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:21:25,878 | INFO | ✅ Unit modal opened
+2025-12-28 05:21:29,739 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:21:35,004 | INFO | ✅ Unit rows scraped = 154
+2025-12-28 05:21:37,314 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:21:37,314 | INFO | ✅ Unit details scraped
+2025-12-28 05:21:38,831 | INFO | ✅ Returned to listing
+2025-12-28 05:21:38,866 | INFO | ✅ [4] Open: 11080-3 TAMAN VISTA KIRANA
+2025-12-28 05:21:43,667 | INFO | ✅ Opened project detail
+2025-12-28 05:21:47,482 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:21:47,493 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:21:47,519 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:21:51,332 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:21:51,344 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:21:51,344 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:21:51,834 | INFO | ✅ Status table rows = 7
+2025-12-28 05:21:55,649 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:22:00,473 | INFO | ✅ Unit modal opened
+2025-12-28 05:22:04,325 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:22:09,559 | INFO | ✅ Unit rows scraped = 154
+2025-12-28 05:22:11,869 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:22:11,869 | INFO | ✅ Unit details scraped
+2025-12-28 05:22:13,386 | INFO | ✅ Returned to listing
+2025-12-28 05:22:13,421 | INFO | ✅ [5] Open: 11080-2 GJH PROPERTIES SDN BHD
+2025-12-28 05:22:18,224 | INFO | ✅ Opened project detail
+2025-12-28 05:22:22,037 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:22:22,048 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:22:22,074 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:22:25,887 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:22:25,902 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:22:25,902 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:22:26,550 | INFO | ✅ Status table rows = 9
+2025-12-28 05:22:30,364 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:22:35,196 | INFO | ✅ Unit modal opened
+2025-12-28 05:22:39,041 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:22:39,724 | INFO | ✅ Unit rows scraped = 19
+2025-12-28 05:22:42,029 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:22:42,029 | INFO | ✅ Unit details scraped
+2025-12-28 05:22:43,546 | INFO | ✅ Returned to listing
+2025-12-28 05:22:43,583 | INFO | ✅ [6] Open: 11080-1 TAMAN VISTA KIRANA
+2025-12-28 05:22:48,386 | INFO | ✅ Opened project detail
+2025-12-28 05:22:52,200 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:22:52,211 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:22:52,239 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:22:56,050 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:22:56,062 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:22:56,062 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:22:56,419 | INFO | ✅ Status table rows = 5
+2025-12-28 05:23:00,231 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:23:05,047 | INFO | ✅ Unit modal opened
+2025-12-28 05:23:08,876 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:23:09,536 | INFO | ✅ Unit rows scraped = 19
+2025-12-28 05:23:11,841 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:23:11,842 | INFO | ✅ Unit details scraped
+2025-12-28 05:23:13,359 | INFO | ✅ Returned to listing
+2025-12-28 05:23:13,394 | INFO | ✅ [7] Open: 9697-9 TAMAN PAYA RUMPUT ABADI
+2025-12-28 05:23:18,196 | INFO | ✅ Opened project detail
+2025-12-28 05:23:22,019 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:23:22,032 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:23:22,058 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:23:25,871 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:23:25,882 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:23:25,882 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:23:26,181 | INFO | ✅ Status table rows = 4
+2025-12-28 05:23:30,000 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:23:34,820 | INFO | ✅ Unit modal opened
+2025-12-28 05:23:38,653 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:23:40,684 | INFO | ✅ Unit rows scraped = 60
+2025-12-28 05:23:43,018 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:23:43,018 | INFO | ✅ Unit details scraped
+2025-12-28 05:23:44,536 | INFO | ✅ Returned to listing
+2025-12-28 05:23:44,571 | INFO | ✅ [8] Open: 9697-5 GJH DEVELOPMENT SDN BHD
+2025-12-28 05:23:49,372 | INFO | ✅ Opened project detail
+2025-12-28 05:23:53,191 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:23:53,203 | INFO | ✅ Daerah Projek = 'Jasin'
+2025-12-28 05:23:53,230 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:23:57,044 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:23:57,056 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:23:57,056 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:23:57,349 | INFO | ✅ Status table rows = 4
+2025-12-28 05:24:01,166 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:24:05,992 | INFO | ✅ Unit modal opened
+2025-12-28 05:24:09,828 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:24:11,368 | INFO | ✅ Unit rows scraped = 44
+2025-12-28 05:24:13,691 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:24:13,691 | INFO | ✅ Unit details scraped
+2025-12-28 05:24:15,209 | INFO | ✅ Returned to listing
+2025-12-28 05:24:15,248 | INFO | ✅ [9] Open: 9697-3 TAMAN KRUBONG PERDANA PHASE 2
+2025-12-28 05:24:20,052 | INFO | ✅ Opened project detail
+2025-12-28 05:24:23,872 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:24:23,882 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:24:23,908 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:24:27,718 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:24:27,728 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:24:27,729 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-28 05:24:27,887 | INFO | ✅ Status table rows = 2
+2025-12-28 05:24:31,700 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:24:36,520 | INFO | ✅ Unit modal opened
+2025-12-28 05:24:40,360 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:24:41,878 | INFO | ✅ Unit rows scraped = 44
+2025-12-28 05:24:44,187 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:24:44,187 | INFO | ✅ Unit details scraped
+2025-12-28 05:24:45,704 | INFO | ✅ Returned to listing
+2025-12-28 05:24:45,740 | INFO | ✅ [10] Open: 9697-2 GJH DEVELOPMENT SDN BHD
+2025-12-28 05:24:50,541 | INFO | ✅ Opened project detail
+2025-12-28 05:24:54,357 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:24:54,368 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:24:54,395 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:24:58,208 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:24:58,220 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:24:58,221 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:24:58,633 | INFO | ✅ Status table rows = 6
+2025-12-28 05:25:02,446 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:25:07,266 | INFO | ✅ Unit modal opened
+2025-12-28 05:25:11,103 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:25:12,610 | INFO | ✅ Unit rows scraped = 44
+2025-12-28 05:25:14,918 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:25:14,918 | INFO | ✅ Unit details scraped
+2025-12-28 05:25:16,436 | INFO | ✅ Returned to listing
+2025-12-28 05:25:16,472 | INFO | ✅ [11] Open: 9697-1 TAMAN DELIMA RAYA
+2025-12-28 05:25:21,275 | INFO | ✅ Opened project detail
+2025-12-28 05:25:25,088 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:25:25,099 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:25:25,126 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:25:28,938 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:25:28,950 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:25:28,950 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-28 05:25:29,175 | INFO | ✅ Status table rows = 3
+2025-12-28 05:25:32,989 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:25:37,807 | INFO | ✅ Unit modal opened
+2025-12-28 05:25:41,647 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:25:43,147 | INFO | ✅ Unit rows scraped = 44
+2025-12-28 05:25:45,455 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:25:45,455 | INFO | ✅ Unit details scraped
+2025-12-28 05:25:46,973 | INFO | ✅ Returned to listing
+2025-12-28 05:25:47,128 | INFO | ✅ No next page. Pagination done.
+2025-12-28 05:25:47,129 | INFO | ✅ Saved CSV: ./data/pemaju/GJH/GJH_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 05:25:47,130 | INFO | ✅ Saved CSV: ./data/pemaju/GJH/GJH_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 05:25:47,139 | INFO | ✅ Saved CSV: ./data/pemaju/GJH/GJH_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 05:25:47,139 | INFO | ✅ SUMMARY: Projects=11, HouseTypes=66, UnitRows=1207
+2025-12-28 05:25:47,139 | INFO | ✅ DONE pemaju scrape
+2025-12-28 05:25:47,236 | INFO | ✅ Chrome driver closed

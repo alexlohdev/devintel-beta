@@ -1,0 +1,102 @@
+2025-12-28 06:21:54,508 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_GABUNGAN EHSAN_20251228_050330.log
+2025-12-28 06:21:54,508 | INFO | ✅ Start Pemaju: GABUNGAN EHSAN
+2025-12-28 06:21:54,508 | INFO | ✅ Output folder: ./data/pemaju/GABUNGAN EHSAN
+2025-12-28 06:21:54,508 | INFO | ====== WebDriver manager ======
+2025-12-28 06:21:54,575 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 06:21:54,621 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 06:21:54,665 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 06:21:54,871 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 06:22:01,777 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 06:22:06,405 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 06:22:11,020 | INFO | ✅ Negeri = Melaka
+2025-12-28 06:22:12,621 | INFO | ✅ Kata Kunci = GABUNGAN EHSAN
+2025-12-28 06:22:14,941 | INFO | ✅ Clicked CARI
+2025-12-28 06:22:14,956 | INFO | ✅ Results table loaded
+2025-12-28 06:22:14,956 | INFO | ✅ Processing listing page 1
+2025-12-28 06:22:15,016 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 06:22:19,825 | INFO | ✅ Opened project detail
+2025-12-28 06:22:23,658 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:22:23,674 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:22:23,708 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:22:27,524 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:22:27,538 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:22:27,538 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:22:27,628 | INFO | ✅ Status table rows = 1
+2025-12-28 06:22:31,443 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:22:36,275 | INFO | ✅ Unit modal opened
+2025-12-28 06:22:40,125 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:22:41,492 | INFO | ✅ Unit rows scraped = 40
+2025-12-28 06:22:43,860 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:22:43,860 | INFO | ✅ Unit details scraped
+2025-12-28 06:22:45,378 | INFO | ✅ Returned to listing
+2025-12-28 06:22:45,413 | INFO | ✅ [2] Open: 9778-4 TAMAN INDAH, SG UDANG, MELAKA
+2025-12-28 06:22:50,217 | INFO | ✅ Opened project detail
+2025-12-28 06:22:54,037 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:22:54,050 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 06:22:54,078 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:22:57,896 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:22:57,907 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:22:57,907 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:22:57,990 | INFO | ✅ Status table rows = 1
+2025-12-28 06:23:01,809 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:23:06,633 | INFO | ✅ Unit modal opened
+2025-12-28 06:23:10,491 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:23:13,853 | INFO | ✅ Unit rows scraped = 100
+2025-12-28 06:23:16,161 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:23:16,161 | INFO | ✅ Unit details scraped
+2025-12-28 06:23:17,680 | INFO | ✅ Returned to listing
+2025-12-28 06:23:17,716 | INFO | ✅ [3] Open: 9778-3 TAMAN INDAH
+2025-12-28 06:23:22,517 | INFO | ✅ Opened project detail
+2025-12-28 06:23:26,341 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:23:26,354 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 06:23:26,380 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:23:30,193 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:23:30,204 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:23:30,204 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 06:23:30,627 | INFO | ✅ Status table rows = 6
+2025-12-28 06:23:34,443 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:23:39,268 | INFO | ✅ Unit modal opened
+2025-12-28 06:23:43,152 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:23:51,002 | INFO | ✅ Unit rows scraped = 235
+2025-12-28 06:23:53,373 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:23:53,373 | INFO | ✅ Unit details scraped
+2025-12-28 06:23:54,894 | INFO | ✅ Returned to listing
+2025-12-28 06:23:54,929 | INFO | ✅ [4] Open: 9778-2 TAMAN INDAH
+2025-12-28 06:23:59,737 | INFO | ✅ Opened project detail
+2025-12-28 06:24:03,560 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:24:03,574 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 06:24:03,609 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:24:07,426 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:24:07,441 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:24:07,442 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-28 06:24:07,981 | INFO | ✅ Status table rows = 7
+2025-12-28 06:24:11,796 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:24:16,638 | INFO | ✅ Unit modal opened
+2025-12-28 06:24:20,538 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:24:28,467 | INFO | ✅ Unit rows scraped = 235
+2025-12-28 06:24:30,781 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:24:30,781 | INFO | ✅ Unit details scraped
+2025-12-28 06:24:32,303 | INFO | ✅ Returned to listing
+2025-12-28 06:24:32,340 | INFO | ✅ [5] Open: 9778-1 TAMAN PAYA RUMPUT INDAH II
+2025-12-28 06:24:37,150 | INFO | ✅ Opened project detail
+2025-12-28 06:24:40,974 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:24:40,987 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 06:24:41,023 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 06:24:44,837 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 06:24:44,854 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 06:24:44,855 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-28 06:24:45,288 | INFO | ✅ Status table rows = 6
+2025-12-28 06:24:49,099 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 06:24:53,945 | INFO | ✅ Unit modal opened
+2025-12-28 06:24:57,837 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 06:25:05,752 | INFO | ✅ Unit rows scraped = 235
+2025-12-28 06:25:08,070 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 06:25:08,070 | INFO | ✅ Unit details scraped
+2025-12-28 06:25:09,592 | INFO | ✅ Returned to listing
+2025-12-28 06:25:09,822 | INFO | ✅ No next page. Pagination done.
+2025-12-28 06:25:09,822 | INFO | ✅ Saved CSV: ./data/pemaju/GABUNGAN EHSAN/GABUNGAN EHSAN_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 06:25:09,823 | INFO | ✅ Saved CSV: ./data/pemaju/GABUNGAN EHSAN/GABUNGAN EHSAN_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 06:25:09,829 | INFO | ✅ Saved CSV: ./data/pemaju/GABUNGAN EHSAN/GABUNGAN EHSAN_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 06:25:09,829 | INFO | ✅ SUMMARY: Projects=5, HouseTypes=21, UnitRows=845
+2025-12-28 06:25:09,829 | INFO | ✅ DONE pemaju scrape
+2025-12-28 06:25:09,923 | INFO | ✅ Chrome driver closed

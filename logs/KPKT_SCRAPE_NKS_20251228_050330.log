@@ -1,0 +1,134 @@
+2025-12-28 05:27:13,507 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_NKS_20251228_050330.log
+2025-12-28 05:27:13,507 | INFO | ✅ Start Pemaju: NKS
+2025-12-28 05:27:13,507 | INFO | ✅ Output folder: ./data/pemaju/NKS
+2025-12-28 05:27:13,507 | INFO | ====== WebDriver manager ======
+2025-12-28 05:27:13,575 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:27:13,622 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 05:27:13,668 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 05:27:13,886 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 05:27:21,714 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 05:27:26,342 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 05:27:30,955 | INFO | ✅ Negeri = Melaka
+2025-12-28 05:27:32,542 | INFO | ✅ Kata Kunci = NKS
+2025-12-28 05:27:34,863 | INFO | ✅ Clicked CARI
+2025-12-28 05:27:34,878 | INFO | ✅ Results table loaded
+2025-12-28 05:27:34,878 | INFO | ✅ Processing listing page 1
+2025-12-28 05:27:34,940 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 05:27:39,750 | INFO | ✅ Opened project detail
+2025-12-28 05:27:43,578 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:27:43,594 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 05:27:43,628 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:27:47,443 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:27:47,458 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:27:47,458 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:27:47,549 | INFO | ✅ Status table rows = 1
+2025-12-28 05:27:51,373 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:27:56,205 | INFO | ✅ Unit modal opened
+2025-12-28 05:28:00,095 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:28:07,256 | INFO | ✅ Unit rows scraped = 207
+2025-12-28 05:28:09,579 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:28:09,579 | INFO | ✅ Unit details scraped
+2025-12-28 05:28:11,100 | INFO | ✅ Returned to listing
+2025-12-28 05:28:11,137 | INFO | ✅ [2] Open: 4818-27 TAMAN MERAK MAS
+2025-12-28 05:28:15,947 | INFO | ✅ Opened project detail
+2025-12-28 05:28:19,768 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:28:19,782 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:28:19,817 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:28:23,635 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:28:23,650 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:28:23,650 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:28:23,820 | INFO | ✅ Status table rows = 2
+2025-12-28 05:28:27,632 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:28:32,480 | INFO | ✅ Unit modal opened
+2025-12-28 05:28:36,356 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:28:43,430 | INFO | ✅ Unit rows scraped = 207
+2025-12-28 05:28:45,739 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:28:45,739 | INFO | ✅ Unit details scraped
+2025-12-28 05:28:47,257 | INFO | ✅ Returned to listing
+2025-12-28 05:28:47,292 | INFO | ✅ [3] Open: 4818-26 TAMAN PULAU GADONG JAYA
+2025-12-28 05:28:52,095 | INFO | ✅ Opened project detail
+2025-12-28 05:28:55,908 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:28:55,918 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:28:55,944 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:28:59,755 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:28:59,766 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:28:59,766 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:28:59,917 | INFO | ✅ Status table rows = 2
+2025-12-28 05:29:03,729 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:29:08,570 | INFO | ✅ Unit modal opened
+2025-12-28 05:29:12,435 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:29:19,505 | INFO | ✅ Unit rows scraped = 207
+2025-12-28 05:29:21,817 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:29:21,818 | INFO | ✅ Unit details scraped
+2025-12-28 05:29:23,334 | INFO | ✅ Returned to listing
+2025-12-28 05:29:23,370 | INFO | ✅ [4] Open: 4818-25 TAMAN PULAU GADONG JAYA
+2025-12-28 05:29:28,173 | INFO | ✅ Opened project detail
+2025-12-28 05:29:31,987 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:29:31,998 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:29:32,025 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:29:35,836 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:29:35,848 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:29:35,848 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:29:35,938 | INFO | ✅ Status table rows = 1
+2025-12-28 05:29:39,750 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:29:44,587 | INFO | ✅ Unit modal opened
+2025-12-28 05:29:48,454 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:29:55,472 | INFO | ✅ Unit rows scraped = 207
+2025-12-28 05:29:57,784 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:29:57,784 | INFO | ✅ Unit details scraped
+2025-12-28 05:29:59,301 | INFO | ✅ Returned to listing
+2025-12-28 05:29:59,336 | INFO | ✅ [5] Open: 4818-24 TAMAN DELIMA RAYA
+2025-12-28 05:30:04,138 | INFO | ✅ Opened project detail
+2025-12-28 05:30:07,962 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:30:07,976 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:30:08,014 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:30:11,830 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:30:11,845 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:30:11,845 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 05:30:12,079 | INFO | ✅ Status table rows = 3
+2025-12-28 05:30:15,894 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:30:20,734 | INFO | ✅ Unit modal opened
+2025-12-28 05:30:24,624 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:30:31,767 | INFO | ✅ Unit rows scraped = 207
+2025-12-28 05:30:34,088 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:30:34,088 | INFO | ✅ Unit details scraped
+2025-12-28 05:30:35,610 | INFO | ✅ Returned to listing
+2025-12-28 05:30:35,647 | INFO | ✅ [6] Open: 4818-22 TAMAN MERBOK
+2025-12-28 05:30:40,459 | INFO | ✅ Opened project detail
+2025-12-28 05:30:44,284 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:30:44,299 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:30:44,336 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:30:48,152 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:30:48,166 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:30:48,167 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-28 05:30:48,257 | INFO | ✅ Status table rows = 1
+2025-12-28 05:30:52,067 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:30:56,915 | INFO | ✅ Unit modal opened
+2025-12-28 05:31:00,810 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:31:07,901 | INFO | ✅ Unit rows scraped = 207
+2025-12-28 05:31:10,219 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:31:10,219 | INFO | ✅ Unit details scraped
+2025-12-28 05:31:11,740 | INFO | ✅ Returned to listing
+2025-12-28 05:31:11,775 | INFO | ✅ [7] Open: 4818-20 TAMAN SERI SONGKET
+2025-12-28 05:31:16,586 | INFO | ✅ Opened project detail
+2025-12-28 05:31:20,408 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:31:20,422 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 05:31:20,457 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 05:31:24,274 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 05:31:24,289 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 05:31:24,289 | INFO | ✅ Status Keseluruhan = Siap Dengan CFO
+2025-12-28 05:31:24,449 | INFO | ✅ Status table rows = 2
+2025-12-28 05:31:28,260 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 05:31:33,106 | INFO | ✅ Unit modal opened
+2025-12-28 05:31:36,988 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 05:31:43,885 | INFO | ✅ Unit rows scraped = 207
+2025-12-28 05:31:46,213 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 05:31:46,214 | INFO | ✅ Unit details scraped
+2025-12-28 05:31:47,735 | INFO | ✅ Returned to listing
+2025-12-28 05:31:47,943 | INFO | ✅ No next page. Pagination done.
+2025-12-28 05:31:47,944 | INFO | ✅ Saved CSV: ./data/pemaju/NKS/NKS_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 05:31:47,944 | INFO | ✅ Saved CSV: ./data/pemaju/NKS/NKS_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 05:31:47,954 | INFO | ✅ Saved CSV: ./data/pemaju/NKS/NKS_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 05:31:47,954 | INFO | ✅ SUMMARY: Projects=7, HouseTypes=12, UnitRows=1449
+2025-12-28 05:31:47,954 | INFO | ✅ DONE pemaju scrape
+2025-12-28 05:31:48,047 | INFO | ✅ Chrome driver closed

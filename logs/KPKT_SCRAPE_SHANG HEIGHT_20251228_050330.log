@@ -1,0 +1,214 @@
+2025-12-28 07:07:41,499 | INFO | ✅ Log file: ./logs/KPKT_SCRAPE_SHANG HEIGHT_20251228_050330.log
+2025-12-28 07:07:41,500 | INFO | ✅ Start Pemaju: SHANG HEIGHT
+2025-12-28 07:07:41,500 | INFO | ✅ Output folder: ./data/pemaju/SHANG HEIGHT
+2025-12-28 07:07:41,500 | INFO | ====== WebDriver manager ======
+2025-12-28 07:07:41,567 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 07:07:41,615 | INFO | Get LATEST chromedriver version for google-chrome
+2025-12-28 07:07:41,660 | INFO | Driver [/home/runner/.wdm/drivers/chromedriver/linux64/143.0.7499.169/chromedriver-linux64/chromedriver] found in cache
+2025-12-28 07:07:41,862 | INFO | ✅ Chrome started (headless=True)
+2025-12-28 07:07:47,985 | INFO | ✅ Opened https://teduh.kpkt.gov.my/semakan-status-kemajuan
+2025-12-28 07:07:52,614 | INFO | ✅ Jenis Carian = Pemaju
+2025-12-28 07:07:57,233 | INFO | ✅ Negeri = Melaka
+2025-12-28 07:07:58,831 | INFO | ✅ Kata Kunci = SHANG HEIGHT
+2025-12-28 07:08:01,149 | INFO | ✅ Clicked CARI
+2025-12-28 07:08:01,164 | INFO | ✅ Results table loaded
+2025-12-28 07:08:01,165 | INFO | ✅ Processing listing page 1
+2025-12-28 07:08:01,225 | INFO | ✅ [1] Open: 31199-1 TAMAN BANDAR BAHARU KIJAL
+2025-12-28 07:08:06,033 | INFO | ✅ Opened project detail
+2025-12-28 07:08:09,863 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:08:09,880 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:08:09,916 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:08:13,742 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:08:13,757 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:08:13,757 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:08:13,849 | INFO | ✅ Status table rows = 1
+2025-12-28 07:08:17,663 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:08:22,494 | INFO | ✅ Unit modal opened
+2025-12-28 07:08:26,382 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:08:32,838 | INFO | ✅ Unit rows scraped = 192
+2025-12-28 07:08:35,158 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:08:35,159 | INFO | ✅ Unit details scraped
+2025-12-28 07:08:36,679 | INFO | ✅ Returned to listing
+2025-12-28 07:08:36,713 | INFO | ✅ [2] Open: 19977-3 TAMAN BERTAM SETIA
+2025-12-28 07:08:41,524 | INFO | ✅ Opened project detail
+2025-12-28 07:08:45,347 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:08:45,368 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:08:45,409 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:08:49,229 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:08:49,244 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:08:49,244 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 07:08:49,340 | INFO | ✅ Status table rows = 1
+2025-12-28 07:08:53,160 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:08:58,000 | INFO | ✅ Unit modal opened
+2025-12-28 07:09:01,832 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:09:03,265 | INFO | ✅ Unit rows scraped = 42
+2025-12-28 07:09:05,570 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:09:05,570 | INFO | ✅ Unit details scraped
+2025-12-28 07:09:07,087 | INFO | ✅ Returned to listing
+2025-12-28 07:09:07,123 | INFO | ✅ [3] Open: 19977-2 TAMAN ANGKASA NURI
+2025-12-28 07:09:11,925 | INFO | ✅ Opened project detail
+2025-12-28 07:09:15,742 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:09:15,755 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 07:09:15,783 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:09:19,596 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:09:19,609 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:09:19,609 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:09:19,765 | INFO | ✅ Status table rows = 2
+2025-12-28 07:09:23,586 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:09:28,408 | INFO | ✅ Unit modal opened
+2025-12-28 07:09:32,242 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:09:33,811 | INFO | ✅ Unit rows scraped = 45
+2025-12-28 07:09:36,138 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:09:36,138 | INFO | ✅ Unit details scraped
+2025-12-28 07:09:37,655 | INFO | ✅ Returned to listing
+2025-12-28 07:09:37,691 | INFO | ✅ [4] Open: 19977-1 TAMAN ANGKASA NURI
+2025-12-28 07:09:42,494 | INFO | ✅ Opened project detail
+2025-12-28 07:09:46,313 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:09:46,326 | INFO | ✅ Daerah Projek = 'Alor Gajah'
+2025-12-28 07:09:46,353 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:09:50,170 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:09:50,190 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:09:50,190 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:09:50,485 | INFO | ✅ Status table rows = 4
+2025-12-28 07:09:54,305 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:09:59,126 | INFO | ✅ Unit modal opened
+2025-12-28 07:10:02,966 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:10:05,173 | INFO | ✅ Unit rows scraped = 63
+2025-12-28 07:10:07,481 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:10:07,481 | INFO | ✅ Unit details scraped
+2025-12-28 07:10:08,999 | INFO | ✅ Returned to listing
+2025-12-28 07:10:09,035 | INFO | ✅ [5] Open: 14627-8 TAMAN BERTAM SETIA
+2025-12-28 07:10:13,839 | INFO | ✅ Opened project detail
+2025-12-28 07:10:17,658 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:10:17,671 | INFO | ✅ Daerah Projek = '-'
+2025-12-28 07:10:17,699 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:10:21,512 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:10:21,524 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:10:21,524 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 07:10:21,610 | INFO | ✅ Status table rows = 1
+2025-12-28 07:10:25,424 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:10:30,249 | INFO | ✅ Unit modal opened
+2025-12-28 07:10:34,084 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:10:34,526 | INFO | ✅ Unit rows scraped = 12
+2025-12-28 07:10:36,878 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:10:36,878 | INFO | ✅ Unit details scraped
+2025-12-28 07:10:38,394 | INFO | ✅ Returned to listing
+2025-12-28 07:10:38,431 | INFO | ✅ [6] Open: 14627-7 TAMAN BERTAM SETIA
+2025-12-28 07:10:43,236 | INFO | ✅ Opened project detail
+2025-12-28 07:10:47,059 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:10:47,072 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:10:47,098 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:10:50,911 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:10:50,922 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:10:50,922 | INFO | ✅ Status Keseluruhan = Lancar
+2025-12-28 07:10:51,016 | INFO | ✅ Status table rows = 1
+2025-12-28 07:10:54,832 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:10:59,653 | INFO | ✅ Unit modal opened
+2025-12-28 07:11:03,482 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:11:04,276 | INFO | ✅ Unit rows scraped = 22
+2025-12-28 07:11:06,651 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:11:06,651 | INFO | ✅ Unit details scraped
+2025-12-28 07:11:08,169 | INFO | ✅ Returned to listing
+2025-12-28 07:11:08,206 | INFO | ✅ [7] Open: 14627-6 TAMAN TANJONG MINYAK PERDANA, BERTAM ULU
+2025-12-28 07:11:13,010 | INFO | ✅ Opened project detail
+2025-12-28 07:11:16,827 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:11:16,839 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:11:16,865 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:11:20,682 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:11:20,693 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:11:20,693 | INFO | ✅ Status Keseluruhan = Lewat
+2025-12-28 07:11:20,776 | INFO | ✅ Status table rows = 1
+2025-12-28 07:11:24,593 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:11:29,414 | INFO | ✅ Unit modal opened
+2025-12-28 07:11:33,246 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:11:35,098 | INFO | ✅ Unit rows scraped = 53
+2025-12-28 07:11:37,405 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:11:37,405 | INFO | ✅ Unit details scraped
+2025-12-28 07:11:38,921 | INFO | ✅ Returned to listing
+2025-12-28 07:11:38,960 | INFO | ✅ [8] Open: 14627-5 TAMAN BUKIT LINTANG PERMAI
+2025-12-28 07:11:43,761 | INFO | ✅ Opened project detail
+2025-12-28 07:11:47,577 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:11:47,589 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:11:47,615 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:11:51,427 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:11:51,438 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:11:51,438 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:11:51,600 | INFO | ✅ Status table rows = 2
+2025-12-28 07:11:55,417 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:12:00,238 | INFO | ✅ Unit modal opened
+2025-12-28 07:12:04,089 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:12:07,670 | INFO | ✅ Unit rows scraped = 105
+2025-12-28 07:12:10,014 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:12:10,014 | INFO | ✅ Unit details scraped
+2025-12-28 07:12:11,531 | INFO | ✅ Returned to listing
+2025-12-28 07:12:11,567 | INFO | ✅ [9] Open: 14627-4 TAMAN BERTAM SETIA
+2025-12-28 07:12:16,368 | INFO | ✅ Opened project detail
+2025-12-28 07:12:20,185 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:12:20,198 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:12:20,224 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:12:24,038 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:12:24,050 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:12:24,050 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:12:24,195 | INFO | ✅ Status table rows = 2
+2025-12-28 07:12:28,008 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:12:32,833 | INFO | ✅ Unit modal opened
+2025-12-28 07:12:36,673 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:12:38,368 | INFO | ✅ Unit rows scraped = 50
+2025-12-28 07:12:40,726 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:12:40,727 | INFO | ✅ Unit details scraped
+2025-12-28 07:12:42,244 | INFO | ✅ Returned to listing
+2025-12-28 07:12:42,279 | INFO | ✅ [10] Open: 14627-3 SHANG HEIGHT REALTY SDN. BHD.
+2025-12-28 07:12:47,082 | INFO | ✅ Opened project detail
+2025-12-28 07:12:50,899 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:12:50,912 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:12:50,937 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:12:54,747 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:12:54,759 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:12:54,759 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:12:54,838 | INFO | ✅ Status table rows = 1
+2025-12-28 07:12:58,651 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:13:03,473 | INFO | ✅ Unit modal opened
+2025-12-28 07:13:07,304 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:13:08,727 | INFO | ✅ Unit rows scraped = 42
+2025-12-28 07:13:11,037 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:13:11,037 | INFO | ✅ Unit details scraped
+2025-12-28 07:13:12,554 | INFO | ✅ Returned to listing
+2025-12-28 07:13:12,589 | INFO | ✅ [11] Open: 14627-2 SHANG HEIGHT REALTY SDN. BHD.
+2025-12-28 07:13:17,388 | INFO | ✅ Opened project detail
+2025-12-28 07:13:21,203 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:13:21,216 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:13:21,242 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:13:25,054 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:13:25,066 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:13:25,066 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:13:25,150 | INFO | ✅ Status table rows = 1
+2025-12-28 07:13:28,967 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:13:33,787 | INFO | ✅ Unit modal opened
+2025-12-28 07:13:37,629 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:13:38,927 | INFO | ✅ Unit rows scraped = 39
+2025-12-28 07:13:41,286 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:13:41,286 | INFO | ✅ Unit details scraped
+2025-12-28 07:13:42,803 | INFO | ✅ Returned to listing
+2025-12-28 07:13:42,841 | INFO | ✅ [12] Open: 14627-1 SHANG HEIGHT REALTY SDN BHD
+2025-12-28 07:13:47,647 | INFO | ✅ Opened project detail
+2025-12-28 07:13:51,465 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:13:51,478 | INFO | ✅ Daerah Projek = 'Melaka Tengah'
+2025-12-28 07:13:51,503 | INFO | ✅ Maklumat Projek scraped
+2025-12-28 07:13:55,316 | INFO | ✅ Tab opened: status terkini projek
+2025-12-28 07:13:55,328 | INFO | ✅ Maklumat Pembangunan = Berfasa
+2025-12-28 07:13:55,328 | INFO | ✅ Status Keseluruhan = Siap Dengan CCC
+2025-12-28 07:13:55,420 | INFO | ✅ Status table rows = 1
+2025-12-28 07:13:59,235 | INFO | ✅ Tab opened: maklumat projek
+2025-12-28 07:14:04,056 | INFO | ✅ Unit modal opened
+2025-12-28 07:14:07,909 | INFO | ✅ Clicked Paparan Senarai
+2025-12-28 07:14:10,526 | INFO | ✅ Unit rows scraped = 78
+2025-12-28 07:14:12,832 | INFO | ✅ Unit modal closed (TUTUP)
+2025-12-28 07:14:12,832 | INFO | ✅ Unit details scraped
+2025-12-28 07:14:14,347 | INFO | ✅ Returned to listing
+2025-12-28 07:14:14,478 | INFO | ✅ No next page. Pagination done.
+2025-12-28 07:14:14,479 | INFO | ✅ Saved CSV: ./data/pemaju/SHANG HEIGHT/SHANG HEIGHT_MELAKA_ALL_PROJECTS_20251228.csv
+2025-12-28 07:14:14,479 | INFO | ✅ Saved CSV: ./data/pemaju/SHANG HEIGHT/SHANG HEIGHT_MELAKA_HOUSE_TYPE_20251228.csv
+2025-12-28 07:14:14,485 | INFO | ✅ Saved CSV: ./data/pemaju/SHANG HEIGHT/SHANG HEIGHT_MELAKA_UNIT_DETAILS_20251228.csv
+2025-12-28 07:14:14,485 | INFO | ✅ SUMMARY: Projects=12, HouseTypes=18, UnitRows=743
+2025-12-28 07:14:14,485 | INFO | ✅ DONE pemaju scrape
+2025-12-28 07:14:14,584 | INFO | ✅ Chrome driver closed
