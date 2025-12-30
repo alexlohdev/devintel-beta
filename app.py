@@ -403,7 +403,7 @@ if page == "Overview":
     c1, c2 = st.columns([2, 1])
     with c1:
         st.markdown("## Dashboard")
-        st.caption("Melaka • Competitive Intelligence")
+        st.caption("Market intelligence for Melaka property developers to benchmark sales, spot oversupply, and plan launches with confidence")
     with c2:
         view_mode = st.radio("View Mode", ["Single View", "Compare Developers"], horizontal=True)
 
@@ -723,6 +723,7 @@ elif page == "Trends":
 with st.expander("🛠 Debug Panel", expanded=False):
     st.write(f"Supabase Connection Active")
     st.write(f"Projects Loaded: {len(df_projects_all)}")
+
 
 
 
