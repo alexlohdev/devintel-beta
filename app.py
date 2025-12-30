@@ -621,6 +621,9 @@ elif page == "Projects":
 # =========================================================
 # PAGE: TRENDS (Connected to Supabase)
 # =========================================================
+# =========================================================
+# PAGE: TRENDS (Connected to Supabase)
+# =========================================================
 elif page == "Trends":
     st.markdown("## 📈 Sales Trends")
     st.caption("Data source: Supabase (history_logs)")
@@ -630,7 +633,7 @@ elif page == "Trends":
     
     # 2. Fetch History Data
     try:
-        # We order by date to ensure the chart looks right
+        # We order by date ASC initially for the chart
         df_hist = conn.query("SELECT * FROM history_logs ORDER BY scraped_date ASC;", ttl=0)
     except Exception as e:
         st.error(f"Error connecting to database: {e}")
@@ -639,8 +642,15 @@ elif page == "Trends":
     if df_hist.empty:
         st.info("No history logs available yet. (Run the publisher script to generate data!)")
     else:
+        # --- PRE-PROCESSING ---
+        # Create a "Combined Label" to handle duplicate names with different codes
+        # Format: "CODE | NAME"
+        df_hist["project_label"] = df_hist["project_code"].astype(str) + " | " + df_hist["project_name"].astype(str)
+        
+        # Ensure date is datetime
+        df_hist["scraped_date"] = pd.to_datetime(df_hist["scraped_date"])
+
         # 3. Filter by Developer
-        # We use 'developer_name' because that's the column in the history_logs table
         dev_list = sorted(df_hist["developer_name"].unique())
         sel_dev = st.selectbox("Select Developer", dev_list)
         
@@ -649,27 +659,67 @@ elif page == "Trends":
         if df_dev_hist.empty:
             st.info("No data for this developer.")
         else:
-            # 4. Filter by Project
-            projects = sorted(df_dev_hist["project_name"].unique())
-            selected_proj = st.selectbox("Select Project", projects)
+            # 4. Filter by Project (Using the new Unique Label)
+            # Sort by project name for easier finding
+            projects = sorted(df_dev_hist["project_label"].unique())
+            selected_label = st.selectbox("Select Project (Code | Name)", projects)
             
-            # 5. Prepare Chart Data
-            chart_data = df_dev_hist[df_dev_hist["project_name"] == selected_proj].copy()
+            # Filter data to this specific project
+            chart_data = df_dev_hist[df_dev_hist["project_label"] == selected_label].copy()
             
-            # Ensure date is datetime format for Streamlit charts
-            chart_data["scraped_date"] = pd.to_datetime(chart_data["scraped_date"])
+            # 5. Calculate Velocity Metrics (Weekly, Monthly, etc.)
+            # We need to sort DESCENDING by date to find "Latest" vs "Past"
+            df_sorted = chart_data.sort_values(by="scraped_date", ascending=False).reset_index(drop=True)
             
-            # 6. Render Chart
-            st.subheader(f"Sold Units Trend: {selected_proj}")
+            if not df_sorted.empty:
+                current_record = df_sorted.iloc[0]
+                current_sold = current_record["units_sold"]
+                current_date = current_record["scraped_date"]
+                
+                # Helper function to find sales X days ago
+                def get_sales_delta(days_ago):
+                    target_date = current_date - pd.Timedelta(days=days_ago)
+                    # Find records on or before target date
+                    past_records = df_sorted[df_sorted["scraped_date"] <= target_date]
+                    
+                    if past_records.empty:
+                        return 0 # No data that far back
+                    
+                    # Get the most recent record from that time (closest to target)
+                    past_record = past_records.iloc[0] 
+                    past_sold = past_record["units_sold"]
+                    
+                    delta = current_sold - past_sold
+                    # If delta is negative (e.g. returns/cancellation), show 0 or actual neg
+                    return delta
+
+                # Calculate Deltas
+                sold_week = get_sales_delta(7)
+                sold_month = get_sales_delta(30)
+                sold_quarter = get_sales_delta(90)
+                sold_year = get_sales_delta(365)
+
+                # 6. Display Metrics Cards
+                st.markdown("### Sales Velocity")
+                c1, c2, c3, c4 = st.columns(4)
+                c1.metric("Weekly Sold", f"{sold_week} Units", help="Change in last 7 days")
+                c2.metric("Monthly Sold", f"{sold_month} Units", help="Change in last 30 days")
+                c3.metric("Quarterly Sold", f"{sold_quarter} Units", help="Change in last 90 days")
+                c4.metric("Yearly Sold", f"{sold_year} Units", help="Change in last 365 days")
+
+            # 7. Render Chart
+            st.divider()
+            st.subheader(f"Total Sales Trajectory")
+            # We ensure chart_data is sorted ASC for the line chart
+            chart_data_asc = chart_data.sort_values(by="scraped_date", ascending=True)
             
-            # We don't need 'if y_col in...' checks because the DB column 'units_sold' is guaranteed
-            st.line_chart(chart_data, x="scraped_date", y="units_sold")
+            st.line_chart(chart_data_asc, x="scraped_date", y="units_sold")
             
-            st.caption(f"Tracking metric: units_sold")
+            st.caption(f"Tracking metric: Cumulative units_sold for project {selected_label}")
 
             # Optional: Show raw data table below chart
             with st.expander("View Raw Historical Data"):
-                st.dataframe(chart_data, use_container_width=True)
+                st.dataframe(chart_data_asc[["scraped_date", "units_sold", "total_units", "take_up_rate"]], use_container_width=True)
 
 # =========================================================
 # DEBUG PANEL
@@ -677,6 +727,7 @@ elif page == "Trends":
 with st.expander("🛠 Debug Panel", expanded=False):
     st.write(f"Supabase Connection Active")
     st.write(f"Projects Loaded: {len(df_projects_all)}")
+
 
 
 
