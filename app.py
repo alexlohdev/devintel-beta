@@ -200,33 +200,26 @@ def get_last_sync(df_list):
 def build_project_overview(df_master_all: pd.DataFrame, df_units_all: pd.DataFrame):
     """
     Aggregates unit-level data into project-level statistics.
-    Uses English database columns but outputs Malay headers to match UI expectations.
+    Now includes 'status_overall' from the master table.
     """
     if df_units_all is None or df_units_all.empty:
         # Return empty structure with expected headers
-        return pd.DataFrame(columns=["No.", "Pemaju", "Kod Projek & Nama Projek", "Total Unit", "Unit Terjual", 
+        return pd.DataFrame(columns=["No.", "Pemaju", "Kod Projek & Nama Projek", "Status Projek", "Total Unit", "Unit Terjual", 
                                    "Unit Belum Jual", "Take-Up %", "Jumlah Jualan (RM)", 
                                    "Unit Bumi", "Unit Non Bumi", "Daerah", "Negeri"])
 
     dfu = df_units_all.copy()
     
-    # --- 1. Prepare Calculation Columns (using English DB names) ---
-    # Status: Check for both Malay (from scraping) and English keywords
+    # --- 1. Prepare Calculation Columns ---
     dfu["__status"] = dfu.get("status", "").astype(str).str.lower()
     dfu["__is_sold"] = dfu["__status"].str.contains("telah dijual", na=False) | dfu["__status"].str.contains("sold", na=False)
     dfu["__is_unsold"] = dfu["__status"].str.contains("belum dijual", na=False) | dfu["__status"].str.contains("unsold", na=False)
-    
-    # Price
     dfu["__harga"] = dfu.get("price_sales", "").apply(_to_float_rm)
-    
-    # Bumi Quota
     dfu["__is_bumi"] = dfu.get("bumi_quota", "").astype(str).str.strip().str.lower().eq("ya")
 
     # --- 2. Group By (Developer & Project) ---
-    # We group by the Display Name we created earlier to keep it aligned with UI
     gcols = ["pemaju_name", "Kod Projek & Nama Projek"]
     
-    # Safety check
     if "pemaju_name" not in dfu.columns or "Kod Projek & Nama Projek" not in dfu.columns:
         return pd.DataFrame()
 
@@ -241,39 +234,42 @@ def build_project_overview(df_master_all: pd.DataFrame, df_units_all: pd.DataFra
     )
     agg["Unit Non Bumi"] = agg["Total Unit"] - agg["Unit Bumi"]
 
-    # --- 3. Merge Location Data from Master ---
+    # --- 3. Merge Location & STATUS Data from Master ---
     if df_master_all is not None and not df_master_all.empty:
         dfm = df_master_all.copy()
         
-        # We need a common key. Project Code is safest, but we grouped by Name.
-        # Let's try to grab location based on the 'Kod Projek & Nama Projek' we created in both DFs.
-        keep_cols = ["Kod Projek & Nama Projek", "location_district", "location_state"]
+        # We grab 'status_overall' here alongside location
+        keep_cols = ["Kod Projek & Nama Projek", "location_district", "location_state", "status_overall"]
         keep_cols = [c for c in keep_cols if c in dfm.columns]
         
         df_loc = dfm[keep_cols].drop_duplicates(subset=["Kod Projek & Nama Projek"])
         
         if not df_loc.empty:
             agg = agg.merge(df_loc, on="Kod Projek & Nama Projek", how="left")
-            agg = agg.rename(columns={"location_district": "Daerah", "location_state": "Negeri"})
+            # Rename DB columns to UI headers
+            agg = agg.rename(columns={
+                "location_district": "Daerah", 
+                "location_state": "Negeri",
+                "status_overall": "Status Projek"  # <--- NEW COLUMN MAPPING
+            })
         else:
-            agg["Daerah"] = ""; agg["Negeri"] = ""
+            agg["Daerah"] = ""; agg["Negeri"] = ""; agg["Status Projek"] = ""
     else:
-        agg["Daerah"] = ""; agg["Negeri"] = ""
+        agg["Daerah"] = ""; agg["Negeri"] = ""; agg["Status Projek"] = ""
 
     # --- 4. Final Formatting ---
     agg["Take-Up %"] = (agg["Unit Terjual"] / agg["Total Unit"] * 100).fillna(0).round(1)
     
-    # Rename 'pemaju_name' to 'Pemaju' for the UI
     agg = agg.rename(columns={"pemaju_name": "Pemaju"})
 
-    # Select and Reorder columns to match exactly what the UI expects
+    # Select and Reorder columns (Added 'Status Projek')
     target_cols = [
-        "Pemaju", "Kod Projek & Nama Projek", "Total Unit", "Unit Terjual",
+        "Pemaju", "Kod Projek & Nama Projek", "Status Projek",
+        "Total Unit", "Unit Terjual",
         "Unit Belum Jual", "Take-Up %", "Jumlah Jualan (RM)", "Unit Bumi",
         "Unit Non Bumi", "Daerah", "Negeri",
     ]
     
-    # Filter only existing columns (handles edge cases)
     final_cols = [c for c in target_cols if c in agg.columns]
     agg = agg[final_cols].copy()
 
@@ -727,6 +723,7 @@ elif page == "Trends":
 with st.expander("🛠 Debug Panel", expanded=False):
     st.write(f"Supabase Connection Active")
     st.write(f"Projects Loaded: {len(df_projects_all)}")
+
 
 
 
